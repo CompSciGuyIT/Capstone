@@ -11,7 +11,6 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
 
     // Hard coded data for demonstration purposes only
     document.getElementById("create-btn").addEventListener("click", () => {
-       
         db.collection('members').insertOne({
             firstName: 'Markus',
             lastName: 'Quick',

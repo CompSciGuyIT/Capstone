@@ -19,6 +19,11 @@ function createWindow() {
         slashes: true
     }))
 
+    mainWindow.webContents.on("new-window",function(event,url){
+        event.preventDefault();
+        shell.openExternal(url);
+    })
+
     // or Ctrl-Shift-I when app is running
     mainWindow.webContents.openDevTools()
 }
