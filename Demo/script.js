@@ -1,62 +1,46 @@
-const MongoClient = require('mongodb')
-const connectionURL = 'mongodb://127.0.0.1:27017'
+const mariadb = require('mariadb')
 
-MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
-    if (error) {
-        return console.log('Connection Failure!')
-    }
-    console.log('Connection Established!')
+mariadb.createConnection({
+    host: '127.0.0.1', 
+    user: 'root', 
+    password: '', 
+    database: 'team'
+})
+.then((conn) => {
+    console.log('Connection Established!');
 
-    const db = client.db('Team')
+    console.log(conn.serverVersion());
 
-    // Hard coded data for demonstration purposes only
+    conn.query('CREATE TABLE IF NOT EXISTS members (firstName CHAR(50), lastName CHAR(50), email CHAR(50))');
+
     document.getElementById("create-btn").addEventListener("click", () => {
-        db.collection('members').insertOne({
-            firstName: 'Markus',
-            lastName: 'Quick',
-            email: 'quick@email.com'
-        }).then((res) => {
-            console.log(res.ops)
-        }).catch((err) => {
-            console.log(err)
-        })
-        
+        conn.query('INSERT INTO members (firstName, lastName, email) VALUES ("Jeff", "McInnes", "jmac@email.com")')
+        .then(res => {
+            console.log(res);
+        });       
     }, false);
 
     document.getElementById("retrieve-btn").addEventListener("click", () => {
-        db.collection('members').findOne({ 
-            firstName: 'Phillip' 
-        }).then((res) => {
-            console.log(res)
-        }).catch((err) => {
-            console.log(err)
-        })
-
+        conn.query('SELECT * FROM members WHERE firstName="Jeff"')
+        .then(res => {
+            console.log(res);
+        });
     }, false);
     
     document.getElementById("update-btn").addEventListener("click", () => {
-        db.collection('members').updateOne({
-            firstName: 'Kate'
-        }, {
-            $set: {
-                email: 'kate.strong@email.com'
-            }
-        }).then((res) => {
-            console.log(res)
-        }).catch((err) => {
-            console.log(err)
-        })
-    
+        conn.query('UPDATE members SET email="Jeff@email.com" WHERE firstName="Jeff"')
+        .then(res => {
+            console.log(res);
+        });
     }, false);
     
     document.getElementById("delete-btn").addEventListener("click", () => {
-        db.collection('members').deleteOne({ 
-            firstName: 'Markus' 
-        }).then((res) => {
-            console.log(res)
-        }).catch((err) => {
-            console.log(err)
-        })
-    
+        conn.query('DELETE FROM members WHERE firstName="Jeff"')
+        .then(res => {
+            console.log(res);
+        });
     }, false);
-})
+
+}).catch((err) => {
+	return console.log('Connection Failure: ' + err)
+});
