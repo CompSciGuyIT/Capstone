@@ -5,8 +5,8 @@ const url = require('url')
 function createWindow() {
     // Create the browser window.
     let mainWindow = new BrowserWindow ({
-        width: 640,
-        height: 480,
+        width: 1280,
+        height: 800,
         webPreferences: {
             nodeIntegration: true
         }

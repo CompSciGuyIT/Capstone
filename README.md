@@ -32,8 +32,8 @@ where 'database' is the name of the .sql file and 'D:\' is its location.
 
 ### Running Metabase to view the database
 A metabase.jar file needs to be downloaded from https://www.metabase.com/start/jar.html and added to the 'Demo' folder.  This file is too large for Github and must be excluded from the repo.  
-This has already been done in the updated .gitignore.  A shortcut has been created named metabase, which you will need to edit by going into its properties and changing the target to 
+This has already been done in the updated .gitignore.  A shortcut will need to be created (I named mine 'MetabaseStartup'), which you will need to edit by going into its properties and changing the target to 
 point to where you have java.exe on your system, as well as the metabase.jar file. e.g. C:\Java\jdk-13.0.2\bin\java.exe -jar e:\QUT\Capstone\Capstone\Demo\metabase.jar
 
-Double-click the shortcut to run Metabase and navigate to 'localhost:3000' in your browser for a first time setup.
+Double-click the 'MetabaseStartup' shortcut to run Metabase and double-click the 'MetabaseConsole' shortcut which navigates to 'localhost:3000' in your browser for a first time setup.
 Refer to the slack for screenshots of the process.
