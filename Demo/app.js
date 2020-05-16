@@ -25,7 +25,7 @@ function createWindow() {
     })
 
     // or Ctrl-Shift-I when app is running
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
