@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="blue-light.css">
+    <title>Form</title>
+    <style>
+      .passster-form {
+        background: #F9F9F9;
+        padding: 10px;
+        margin: 0px;
+      }
+      .passster-form h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form label {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form .check_label {
+        font-size: 18px;
+        font-weight: 400;
+        color: #404040;
+      }
+      .passster-form .date_label {
+        font-size: 15px;
+        font-weight: 400;
+        color: #404040;
+      }
+      .passster-form .sub_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #404040;
+      }
+      .passster-form .contact_label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #404040;
+      }
+      .passster-form p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #000000;
+      }
+      .passster-form .error {
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #CC4C43;
+      }
+      .passster-form #passster_submit {
+        color: #FFFFFF;
+        background: #4998b3;
+      }
+      .passster-form #passster_submit:hover {
+        color: #FFFFFF;
+        background: #aa1100;
+      }                
+    </style>
+</head>
+<body>
+    <form class="passster-form" id="volunteer_form" action="./index.html" method="post"> <!--  onsubmit="return validateForm()" -->
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Personal Information</label>
+                <div id="volunteer_fields">
+                    <input type="text" class="form-control" placeholder="Surname" name="surname">
+                    <input type="text" class="form-control" placeholder="Given Names" name="given_names">
+                    <input type="text" class="form-control" placeholder="Address 1" name="address_1">
+                    <input type="text" class="form-control" placeholder="Address 2" name="address_2">
+                    <input type="text" class="form-control" placeholder="Postcode" name="postcode">
+                    <input type="tel" class="form-control" placeholder="Phone - Home : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_home">
+                    <input type="tel" class="form-control" placeholder="Phone - Work : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_work">
+                    <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="phone_mobile">
+                    <input type="email" class="form-control" placeholder="Email Address" name="vol_email">
+                    <input type="date" class="form-control" placeholder="Date of Birth" name="dob">
+                    <input type="text" class="form-control" placeholder="Drivers Licence Number" name="licence_number">
+                    <input type="text" class="form-control" placeholder="Drivers Licence Class" name="licence_class">
+                    <input type="text" class="form-control" placeholder="Drivers Licence Expiry Date" name="licence_expiry">
+                    <br/>
+                    <label class="check_label" for="deceased">Deceased</label>
+                    <input type="checkbox" class="form-control" value="true" name="deceased">
+                    <label class="check_label" for="deceased">Redundant</label>
+                    <input type="checkbox" class="form-control" value="true" name="redundant">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Work Experience / Skills</label>
+                <input type="text" class="form-control" placeholder="Current Position" name="current_position">
+                <input type="text" class="form-control" placeholder="Organisation" name="organisation">
+                <input type="text" class="form-control" placeholder="Length of Employment" name="employment_length">
+                <input type="text" class="form-control" placeholder="Main Responsibilities" name="responsibilities"><br/>
+
+                <label class="sub_label">Previous positions over the last 5 years</label><br/>
+                <label class="contact_label">Employer 1</label><br/>
+                <label class="date_label">Date From</label>
+                <input type="date" class="form-control" name="date_from_1">
+                <label class="date_label">Date To</label>
+                <input type="date" class="form-control" name="date_to_1">
+                <input type="text" class="form-control" placeholder="Employer" name="employer_1">
+                <input type="text" class="form-control" placeholder="Position" name="position_1"><br/>
+                <label class="contact_label">Employer 2</label><br/>
+                <label class="date_label">Date From</label>
+                <input type="date" class="form-control" name="date_from_2">
+                <label class="date_label">Date To</label>
+                <input type="date" class="form-control" name="date_to_2">
+                <input type="text" class="form-control" placeholder="Employer" name="employer_2">
+                <input type="text" class="form-control" placeholder="Position" name="position_2"><br/>
+                <label class="contact_label">Employer 3</label><br/>
+                <label class="date_label">Date From</label>
+                <input type="date" class="form-control" name="date_from_3">
+                <label class="date_label">Date To</label>
+                <input type="date" class="form-control" name="date_to_3">
+                <input type="text" class="form-control" placeholder="Employer" name="employer_3">
+                <input type="text" class="form-control" placeholder="Position" name="position_3"><br/>
+                
+                <label class="contact_label">Reference 1</label><br/>
+                <input type="text" class="form-control" placeholder="Full Name" name="ref1_name">
+                <input type="text" class="form-control" placeholder="Relationship" name="ref1_relationship">
+                <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="ref1_phone_home">
+                <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="ref1_phone_mobile">
+                <label class="contact_label">Reference 2</label><br/>
+                <input type="text" class="form-control" placeholder="Full Name" name="ref2_name">
+                <input type="text" class="form-control" placeholder="Relationship" name="ref2_relationship">
+                <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="ref2_phone_home">
+                <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="ref2_phone_mobile">
+                <br/>
+                <label class="check_label" for="medical_condition">Medical Condition?</label>
+                <input type="checkbox" class="form-control" name="medical_condition">
+                <input type="text" class="form-control" placeholder="Medical Details" name="medical_details">
+                
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Blue Card Details</label>
+                <input type="text" class="form-control" placeholder="Blue Card Number - XXXXXX/X" pattern="[0-9]{6}/[0-9]{1}" name="bc_number">
+                <label class="date_label">Issue Date</label>
+                <input type="date" class="form-control" name="bc_issue_date">
+                <label class="date_label">Expiry Date</label>
+                <input type="date" class="form-control" name="bc_expiry_date">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Emergency Contact Details</label>
+                <input type="text" class="form-control" placeholder="Full Name" name="ec1_name">
+                <input type="text" class="form-control" placeholder="Relationship" name="ec1_relationship">
+                <input type="tel" class="form-control" placeholder="Phone - Home : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="ref1_phone_home">
+                <input type="tel" class="form-control" placeholder="Phone - Work : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="ref1_phone_home">
+                <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="ref1_phone_mobile">
+                <br/>
+                <input type="text" class="form-control" placeholder="Full Name" name="ref2_name">
+                <input type="text" class="form-control" placeholder="Relationship" name="ref2_relationship">
+                <input type="tel" class="form-control" placeholder="Phone - Home : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="ref2_phone_home">
+                <input type="tel" class="form-control" placeholder="Phone - Work : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="ref2_phone_home">
+                <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="ref2_phone_mobile">
+                <br/>
+                <input type="text" class="form-control" placeholder="Signed by Volunteer" name="vol_name">
+                <input type="date" class="form-control" placeholder="Date of Birth" name="vol_sign_date">
+                <br/>
+                <input type="text" class="form-control" placeholder="Signed by Guardian" name="gdn_name">
+                <input type="date" class="form-control" placeholder="Date of Birth" name="gdn_sign_date">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Proof of Identity</label>
+                <br/>
+                <label class="sub_label">Category A</label>
+                    <label class="check_label" for="cur_drv_lic">Current Driving Licence</label>
+                    <input type="checkbox" class="form-control" value="true" name="cur_drv_lic">
+                    <label class="check_label" for="cur_passport">Current Passport</label>
+                    <input type="checkbox" class="form-control" value="true" name="cur_passport">
+                    <label class="check_label" for="birth_cert">Birth Certificate</label>
+                    <input type="checkbox" class="form-control" value="true" name="birth_cert">
+                <label class="sub_label">Category B</label>
+                    <label class="check_label" for="medicare_card">Medicare Card</label>
+                    <input type="checkbox" class="form-control" value="true" name="medicare_card">
+                    <label class="check_label" for="centrelink_card">Centrelink Card</label>
+                    <input type="checkbox" class="form-control" value="true" name="centrelink_card">
+                    <label class="check_label" for="dva_card">Department of Veteran’s Affairs (DVA) Card</label>
+                    <input type="checkbox" class="form-control" value="true" name="dva_card">
+                    <label class="check_label" for="bank_card">Credit Card or Account Card</label>
+                    <input type="checkbox" class="form-control" value="true" name="bank_card">
+                <label class="sub_label">Category C</label>
+                    <label class="check_label" for="deceased">Vehicle Rego or Insurance Papers</label>
+                    <input type="checkbox" class="form-control" value="true" name="deceased">
+                    <label class="check_label" for="deceased">Property Rates Notice</label>
+                    <input type="checkbox" class="form-control" value="true" name="deceased">
+                    <label class="check_label" for="deceased">Home Insurance Papers</label>
+                    <input type="checkbox" class="form-control" value="true" name="deceased">
+                    <label class="check_label" for="deceased">Utilities Bills</label>
+                    <input type="checkbox" class="form-control" value="true" name="deceased">
+                    <label class="check_label" for="deceased">Bank Statements</label>
+                    <input type="checkbox" class="form-control" value="true" name="deceased">
+            </div>
+        </div>
+        <br/>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Declaration</label>
+                <br/>
+                <label class="check_label" for="sighted">Sighted</label>
+                <input type="checkbox" class="form-control" value="true" name="sighted">
+                <label class="check_label" for="copies_attached">Copies Attached</label>
+                <input type="checkbox" class="form-control" value="true" name="copies_attached">
+                <br/>
+                <input type="text" class="form-control" placeholder="Signed by" name="signed_by">
+                <input type="date" class="form-control" placeholder="Date" name="signed_date">
+            </div>
+        </div>
+        <br/>
+        <div class="form-group col-md-6">
+            <button type="submit" id="save-btn" onclick="window.location.href='./index.html';">Save</button>
+            <button type="button" onclick="window.location.href='./index.html';">Back</button>
+        </div>
+
+    </form>
+
+</body>
