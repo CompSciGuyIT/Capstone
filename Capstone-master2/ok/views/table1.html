@@ -1,0 +1,213 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="blue-light.css">
+    <title>Form</title>
+    <style>
+      .passster-form {
+        background: #F9F9F9;
+        padding: 10px;
+        margin: 0px;
+      }
+      .passster-form h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form label {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form .check_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4998b3;
+      }
+      .passster-form .date_label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #4998b3;
+      }
+      .passster-form .sub_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4998b3;
+      }
+      .passster-form .contact_label {
+        font-size: 16px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #000000;
+      }
+      .passster-form .error {
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #CC4C43;
+      }
+      .passster-form #passster_submit {
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #4998b3;
+      }
+      .passster-form #passster_submit:hover {
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #aa1100;
+      }
+      .img
+      {
+      display:block;
+      margin-left:10px;
+      margin-right:auto;
+      position: relative;
+      top: 20px;
+      }
+      .inlinez {
+        vertical-align: left;
+      }
+      .post-thumb img {
+    float:center;
+    clear:left;
+    width:80px;
+    height:80px;
+
+}
+
+.text-center1{
+ text-align: center;
+}
+
+.bg { 
+  
+  background-image:url(pictures/blue_table_bg.jpg);
+  height: 100%; 
+  background-position: center;
+  background-repeat:repeat;
+  background-size:cover;
+}
+
+.textTab_color {
+    align-items: top;
+    font-weight: 500;
+    color: #d46802;
+    vertical-align: text-top;
+    text-align: center;
+    padding: 0px;
+    
+}
+.textTab_color2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #f5f1f1;
+    
+    text-align: center;
+    
+}
+.table_pos {
+    position:absolute;
+    top: 100px;
+}
+
+
+
+
+    </style>
+</head>
+
+
+<div class="nav bg-info fixed-top" >
+	<div class="container-fluid">
+        <div class=" textTab_color2">
+            <div class="post-thumb">
+                <img src="pictures/blue_light.jpg" alt="blue light">
+                
+            <a class="nav-item mr-5">Queensland Blue Light Database</a> 
+        </div>
+    </div> 
+		<div class="nav navbar-nav">
+              
+			<div class="nav navbar-right">
+				<a href="/create1" class="btn btn-info btn-lg">Create</a>
+            
+			<div class="nav ">
+				<a href="/" class="btn btn-info btn-lg">Back</a>
+			</div>
+        </div>
+		</div>
+	</div>
+</div>
+<div class="content table_pos  bg">
+	<div class="container-fluid">
+		<div class="row my-4">
+			<div class="col-12">
+				<table class="table table-bordered table-info textTab_color" id="table1">
+					<thead class="thread-dark">
+						<tr>
+              <th scope="col">Action</th>
+              <th scope="col">#</th>
+							<th scope="col">Blue Light Branch</th>
+							<th scope="col">Surname</th>
+							<th scope="col">First Names</th>
+							<th scope="col">Address Line 1</th>
+							<th scope="col">Address Line 2</th>
+							<th scope="col">Phone Home</th>
+							<th scope="col">Phone Work</th>
+							<th scope="col">Phone Mobile</th>
+							<th scope="col">Email</th>
+							<th scope="col">DOB</th>
+							<th scope="col">Drivers Licence</th>
+							<th scope="col">Class</th>
+							<th scope="col">Expiry_Date</th>
+							<th scope="col">Current Position</th>
+							<th scope="col">Organisation</th>
+							<th scope="col">Main Responsibilities</th>
+							<th scope="col">Referee 1</th>
+							<th scope="col">Ref1 Relationship</th>
+							<th scope="col">Ref1 Phone</th>
+							<th scope="col">Referee 2</th>
+							<th scope="col">Ref2 Relationship</th>
+							<th scope="col">Ref2 Phone</th>
+							<th scope="col">Pre-existing Medical Cond</th>
+							<th scope="col">If Yes, Details</th>
+							<th scope="col">Blue Card .</th>
+							<th scope="col">Issue_Date</th>
+							<th scope="col">Issed by BL</th>
+							<th scope="col">If No, Verified</th>
+							<th scope="col">B_C_Expiry_Date</th>
+							<th scope="col">Emergency Contact 1</th>
+							<th scope="col">EC1 Relationship</th>
+							<th scope="col">EC1 Phone</th>
+							<th scope="col">EC1 Phone Wk</th>
+							<th scope="col">EC1 Mobile</th>
+							<th scope="col">Emergency Contact 2</th>
+							<th scope="col">EC2 Relationship</th>
+							<th scope="col">EC2 Phone</th>
+							<th scope="col">EC2 Phone Wk</th>
+							<th scope="col">EC2 Mobile</th>
+							<th scope="col">POI Documents sighted</th>
+							<th scope="col">Latest Award</th>
+							<th scope="col">Year Received</th>
+							<th scope="col">File Notes</th>
+							<th scope="col">Redundant</th>
+							<th scope="col">ON BC LIST</th>
+
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</html>
+<%- include('footer'); -%>
