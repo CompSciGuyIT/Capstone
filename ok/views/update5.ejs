@@ -1,0 +1,72 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table5" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/update5">
+				<div class="form-group">
+					<input value="<%= data ? data.ID : '' %>" type="text" name="ID" hidden />
+					<div class="mb-2">
+						<label>QPS AGM Invites</label>
+						<input value="<%= data ? data.Title : '' %>" type="text" class="form-control"
+							placeholder="title" name="title" />
+					</div>
+					<div class="mb-2">
+						<label>given_names</label>
+						<input value="<%= data ? data.FirstName : '' %>" type="text" class="form-control" placeholder="Given Names"
+							name="given_names" />
+					</div>
+					<div class="mb-2">
+						<label>Surname</label>
+						<input value="<%= data ? data.Surname: '' %>" type="text" class="form-control"
+							placeholder="surname" name="surname" />
+					</div>
+					<div class="mb-2">
+						<label>region</label>
+						<input value="<%= data ? data.Region : '' %>" type="text" class="form-control"
+							placeholder="region" name="region" />
+					</div>
+					<div class="mb-2">
+						<label>address_1</label>
+						<input value="<%= data ? data.address_1 : '' %>" type="text" class="form-control"
+							placeholder="address_1" name="address_1" />
+					
+                    </div>
+                    <div class="mb-2">
+						<label>address_1</label>
+						<input value="<%= data ? data.Address1 : '' %>" type="text" class="form-control"
+							placeholder="address_1" name="address_1" />
+					
+                    </div>
+                    <div class="mb-2">
+						<label>address_2</label>
+						<input value="<%= data ? data.Address2 : '' %>" type="text" class="form-control"
+							placeholder="address_2" name="address_2" />
+					
+                    </div>
+                    <div class="mb-2">
+						<label>state</label>
+						<input value="<%= data ? data.State : '' %>" type="text" class="form-control"
+							placeholder="state" name="state" />
+					
+                    </div>
+                    <div class="mb-2">
+						<label>postcode</label>
+						<input value="<%= data ? data.Postcode : '' %>" type="text" class="form-control"
+							placeholder="postcode" name="postcode" />
+					
+				    </div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>

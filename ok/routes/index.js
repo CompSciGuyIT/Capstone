@@ -7,6 +7,7 @@ const con = mysql.createConnection({
   password: 'Revilo551gna5V',
   database: 'ducanhtest',
 });
+const moment = require('moment')
 
 con.connect(function (err) {
   if (err) throw err;
@@ -17,18 +18,47 @@ router.get('/', function (req, res) {
   res.render('index', { title: 'Home Page' });
 });
 
+
+
+
 // table 111111111111111111111
 router.get('/table1', function (req, res) {
   res.render('table1');
 });
 router.get('/get-data-table1', function (req, res) {
-  con.query("SELECT * FROM volunteerr", function (err, result) {
+  con.query("SELECT * FROM table1", function (err, result) {
     if (err) throw err;
     res.send({
       data: result,
     })
   });
 });
+
+
+router.get('/expires1', function (req, res) {
+  res.render('expires1');
+});
+router.get('/get-data-expires1', function (req, res) {
+  con.query("SELECT * FROM table1", function (err, result) {
+    if (err) throw err;
+    const data = result.filter(item => Math.abs(moment(item.B_C_Expiry_Date).diff(moment(), 'days')) <= 7)
+    res.send({
+      data,
+    })
+  });
+});
+router.get('/get-data-table1', function (req, res) {
+  con.query("SELECT * FROM table1", function (err, result) {
+    if (err) throw err;
+    res.send({
+      data: result,
+    })
+  });
+});
+
+
+
+
 router.get('/create1', function (req, res) {
   res.render('create1', { title: 'Create' });
 });
@@ -46,7 +76,7 @@ router.post('/create1', function (req, res) {
       `'${element}'`
     ]
   }
-  const sql = "INSERT INTO volunteerr (" + colArray.join(', ') + ") VALUES (" + dataArray.join(', ') + ")";
+  const sql = "INSERT INTO table1 (" + colArray.join(', ') + ") VALUES (" + dataArray.join(', ') + ")";
   con.query(sql, function (err) {
     if (err) throw err;
     console.log("1 record inserted into volunteerr table");
@@ -54,7 +84,7 @@ router.post('/create1', function (req, res) {
   });
 });
 router.get('/update1/:id', function (req, res) {
-  const sql = "SELECT * FROM volunteerr WHERE ID = '" + req.params.id + "'";
+  const sql = "SELECT * FROM table1 WHERE ID = '" + req.params.id + "'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     res.render('update1', { title: 'Update', data: result[0] });
@@ -69,7 +99,7 @@ router.post('/update1', function (req, res) {
       `${key} = '${element}'`
     ]
   }
-  const sql = "UPDATE volunteerr SET " + colArray.join(', ') + " WHERE ID = '" + req.body['ID'] + "'";
+  const sql = "UPDATE table1 SET " + colArray.join(', ') + " WHERE ID = '" + req.body['ID'] + "'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result.affectedRows + " record(s) updated");
@@ -78,7 +108,7 @@ router.post('/update1', function (req, res) {
 });
 router.post('/delete1', function (req, res) {
   const { id } = req.body
-  const sql = "DELETE FROM volunteerr WHERE ID = '" + id + "'";
+  const sql = "DELETE FROM table1 WHERE ID = '" + id + "'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Number of records deleted in volunteer table: " + result.affectedRows);

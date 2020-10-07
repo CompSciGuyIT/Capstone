@@ -1,0 +1,60 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table2" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+	</div><div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/update2">
+				<input value="<%= data ? data.ID : '' %>" type="text" name="ID" hidden />
+				<input value="<%= data ? data.BRANCH : '' %>"type="text" class="form-control" placeholder="Branch Name" name="branch">	
+				<input value="<%= data ? data.REGION : '' %>"type="text" class="form-control" placeholder="Region" name="region">
+				<label class="check_label" for="member_since">Affiliate Since</label>
+                <input value="<%= data ? data.Affiliated_Since.split(' ')[0] : '' %> type="date" class="form-control" placeholder="Date of Association" name="member_since">
+				<input value="<%= data ? data.COORDINATOR : '' %>" type="text" class="form-control" placeholder="Coordinator" name="coordinator">
+				<input value="<%= data ? data.PHONE : '' %>"" type="text" class="form-control" placeholder="Phone - Landline :" name="phone_land">
+				<input value="<%= data ? data.HOME : '' %>""type="tel" class="form-control" placeholder="Phone - Home :" name="phone_home">
+				<input value="<%= data ? data.MOBILE: '' %>"" type="tel" class="form-control" placeholder="Phone - Mobile :" name="phone_mobile">
+			    <input value="<%= data ? data.Fax: '' %>"" type="tel" class="form-control" placeholder="Fax :" name="phone_work">
+				<input value="<%= data ? data.EMAIL: '' %>"" type="email" class="form-control" placeholder="Email Address" name="vol_email">
+				<input value="<%= data ? data.MAIL_CONTACT: '' %>"" type="text" class="form-control" placeholder="Mail to" name="mail_to">
+				<input value="<%= data ? data.ADDRESS_LINE_1_STATION/BRANCH: '' %>"" type="text" class="form-control" placeholder="Address 1" name="address_1">
+				<input value="<%= data ? data.ADDRESS_LINE_2_PO_BOX/STREET: '' %>"" type="text" class="form-control" placeholder="Address 2" name="address_2">
+				<input value="<%= data ? data.ADDRESS_LINE_3_SUBURB/TOWN : '' %>"" type="text" class="form-control" placeholder="Postcode" name="postcode">
+				<input value="<%= data ? data.OTHER_CONTACTS: '' %>""  type="text" class="form-control" placeholder="Other Contact" name="other_contact">
+				<button type="submit" class="btn btn-primary">Submit</button>
+                <br/>
+								
+                <br/>        
+                <input value="<%= data ? data.PRESIDENT: '' %>"" type="text" class="form-control" placeholder="President" name="name_pres">
+                <input value="<%= data ? data.PRES_PHONE: '' %>""  type="tel" class="form-control" placeholder="Phone - Landline :" name="phone_pres">
+                <input value="<%= data ? data.PRES_PHONE: '' %>"" type="tel" class="form-control" placeholder="Phone - Mobile : " name="mobile_pres">
+                <input value="<%= data ? data.PRES_ADDRESS: '' %>""  type="text" class="form-control" placeholder="Address" name="address_pres">
+                <br/>
+                <input value="<%= data ? data.VICE_PRESIDENT: '' %>""  type="text" class="form-control" placeholder="Vice President" name="name_vp">
+                <input value="<%= data ? data.V/P_Phone: '' %>"" type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_vp">
+                <input value="<%= data ? data.V/P_Phone: '' %>""  type="tel" class="form-control" placeholder="Phone - Mobile :" name="mobile_vp">
+                <input value="<%= data ? data.V/P_Address: '' %>"" type="text" class="form-control" placeholder="Address" name="address_vp">
+                <br/>
+                <input value="<%= data ? data.TREASURER : '' %>"" type="text" class="form-control" placeholder="Treasurer" name="name_tr">
+                <input value="<%= data ? data.Tres_Phone: '' %>"" type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_tr">
+                <input value="<%= data ? data.Tres_Phone: '' %>"" type="tel" class="form-control" placeholder="Phone - Mobile : " name="mobile_tr">
+                <input value="<%= data ? data.Tres_Address: '' %>"" type="text" class="form-control" placeholder="Address" name="address_tr">
+                <br/>
+                <input value="<%= data ? data.SECRETARY: '' %>"" type="text" class="form-control" placeholder="Secretary" name="name_sec">
+                <input value="<%= data ? data.Sec_Phone : '' %>"" type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_sec">
+                <input value="<%= data ? data.Sec_Phone : '' %>"" type="tel" class="form-control" placeholder="Phone - Mobile : " name="mobile_sec">
+                <input value="<%= data ? data.Sec_Address : '' %>"" type="text" class="form-control" placeholder="Address" name="address_sec">                    
+                <br/>
+            </form>
+            
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>

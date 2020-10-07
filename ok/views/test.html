@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="blue-light.css">
+    <title>Form</title>
+    <style>
+      .passster-form {
+        background: #F9F9F9;
+        padding: 10px;
+        margin: 0px;
+      }
+      .passster-form h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form label {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form .check_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4998b3;
+      }
+      .passster-form .date_label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #4998b3;
+      }
+      .passster-form .sub_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4998b3;
+      }
+      .passster-form .contact_label {
+        font-size: 16px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #000000;
+      }
+      .passster-form .error {
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #CC4C43;
+      }
+      .passster-form #passster_submit {
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #4998b3;
+      }
+      .passster-form #passster_submit:hover {
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #aa1100;
+      }
+      .img
+      {
+      display:block;
+      margin-left:10px;
+      margin-right:auto;
+      position: relative;
+      top: 20px;
+      }
+      .inlinez {
+        vertical-align: left;
+      }
+      .post-thumb img {
+    float:left;
+    clear:left;
+    width:130px;
+    height:130px;
+
+}
+
+.text-center1{
+  text-align: center;
+  width: 550px;
+  
+}
+
+.bg { 
+  
+  background-image:url(pictures/backgroundImg2.jpg);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}        
+    </style>
+</head>
+<body>
+    <form class="passster-form" id="affiliate_form" action="./index.html" method="post"> <!--  onsubmit="return validateForm()" -->
+
+      <div class="bg">
+        <div class="container col-md-6" style=" margin-top:20px;">
+          <div class="jumbotron">
+            <div class="post-thumb">
+            <img src="pictures/blue_light.jpg" alt="blue light">
+            </div> 
+            <h1 class="text-info" ><center>Queensland Blue Light Affiliate Form</center></h1>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-9">
+                <label>Affiliate Member Form</label>
+                <div id="affiliate_fields">
+                    <input type="text" class="form-control" placeholder="Branch Name" name="branch">
+                    <input type="text" class="form-control" placeholder="Region" name="region">
+                    <label class="check_label" for="member_since">Affiliate Since</label>
+                    <input type="date" class="form-control" placeholder="Date of Association" name="member_since">
+                    <input type="text" class="form-control" placeholder="Coordinator" name="coordinator">
+                    <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_land">
+                    <input type="tel" class="form-control" placeholder="Phone - Home : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_home">
+                    <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="phone_mobile">
+                    <input type="tel" class="form-control" placeholder="Fax : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_work">
+                    <input type="email" class="form-control" placeholder="Email Address" name="vol_email">
+                    <input type="text" class="form-control" placeholder="Mail to" name="mail_to">
+                    <input type="text" class="form-control" placeholder="Address 1" name="address_1">
+                    <input type="text" class="form-control" placeholder="Address 2" name="address_2">
+                    <input type="text" class="form-control" placeholder="Postcode" name="postcode">
+                    <input type="text" class="form-control" placeholder="Other Contact" name="other_contact">
+                    <br/>
+                    <label class="check_label text-center1" for="ar_7">2007 Audit Recd</label>
+                    <input type="checkbox" class="form-control" value="true" name="ar_7">
+                    <label class="check_label text-center1" for="ar_8">2008 Audit Recd</label>
+                    <input type="checkbox" class="form-control" value="true" name="ar_8">
+                    <label class="check_label text-center1" for="ar_9">2009 Audit Recd</label>
+                    <input type="checkbox" class="form-control" value="true" name="ar_9">
+                    <label class="check_label text-center1" for="ar_10">2010 Audit Recd</label>
+                    <input type="checkbox" class="form-control" value="true" name="ar_10">
+                    <label class="check_label text-center1" for="ar_11">2011 Audit Recd</label>
+                    <input type="checkbox" class="form-control" value="true" name="ar_11">
+                    <label class="check_label text-center1" for="ar_12">2012 Audit Recd</label>
+                    <input type="checkbox" class="form-control" value="true" name="ar_12">
+                    
+                    <input type="number" class="form-control mt-2" placeholder="Bank Balance at last audit" name="balance">
+                    <br/>        
+                    <input type="text" class="form-control" placeholder="President" name="name_pres">
+                    <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_pres">
+                    <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="mobile_pres">
+                    <input type="text" class="form-control" placeholder="Address" name="address_pres">
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Vice President" name="name_vp">
+                    <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_vp">
+                    <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="mobile_vp">
+                    <input type="text" class="form-control" placeholder="Address" name="address_vp">
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Treasurer" name="name_tr">
+                    <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_tr">
+                    <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="mobile_tr">
+                    <input type="text" class="form-control" placeholder="Address" name="address_tr">
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Secretary" name="name_sec">
+                    <input type="tel" class="form-control" placeholder="Phone - Landline : XX XXXX XXXX" pattern="[0-9]{2} [0-9]{4} [0-9]{4}" name="phone_sec">
+                    <input type="tel" class="form-control" placeholder="Phone - Mobile : XXXX XXX XXX" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" name="mobile_sec">
+                    <input type="text" class="form-control" placeholder="Address" name="address_sec">                    
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Notes" name="notes">
+                    
+                    <br/>
+                    <label class="check_label text-center1" for="merv">MERV Trailer</label>
+                    <input type="checkbox" class="form-control mt-2" value="true" name="merv">
+                    <label class="check_label text-center1 mt-2" for="other">Other Trailer</label>
+                    <input type="checkbox" class="form-control mt-2" value="true" name="other">
+                    <input type="text" class="form-control" placeholder="Rego" name="rego_trailer">
+                    <input type="text" class="form-control" placeholder="Description" name="desc_trailer">
+                    <br/>
+                    <label class="check_label text-center1" for="vehicle">Motor Vehicle</label>
+                    <input type="checkbox" class="form-control mt-2" value="true" name="vehicle">
+                    <input type="text" class="form-control mt-2" placeholder="Rego" name="rego_vehicle">
+                    <input type="text" class="form-control" placeholder="Description" name="desc_vehicle">
+
+                </div>
+            </div>
+        </div>
+
+        <br/>
+        <div class="form-group col-md-6">
+            <button class="btn-info btn-lg mr-2" type="submit" id="save-btn" onclick="window.location.href='./index.html';">Save</button>
+            <button class="btn-info btn-lg" type="button" onclick="window.location.href='./index.html';">Back</button>
+        </div>
+
+    </form>
+
+</body>

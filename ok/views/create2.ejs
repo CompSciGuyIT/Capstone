@@ -1,0 +1,101 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table2" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bg">
+	<div class="container col-md-6" style=" margin-top:20px;">
+	  <div class="jumbotron">
+		<div class="post-thumb">
+		<img src="blue_light.jpg" alt="blue light">
+		</div> 
+		<h1 class="text-info" ><center>Queensland Blue Light Affiliate Form</center></h1>
+	</div><div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/create2">
+				<div class="form-row">
+						<div class="form-group col-md-9">
+							<label>Affiliate Member Form</label>
+							<div id="affiliate_fields">
+								<input type="text" class="form-control" placeholder="Branch Name" name="branch">
+								<input type="text" class="form-control" placeholder="Region" name="region">
+								<label class="check_label" for="member_since">Affiliate Since</label>
+								<input type="date" class="form-control" placeholder="Date of Association" name="member_since">
+								<input type="text" class="form-control" placeholder="Coordinator" name="coordinator">
+								<input type="text" class="form-control" placeholder="Phone - Landline :" name="phone_land">
+								<input type="text" class="form-control" placeholder="Phone - Home :" name="phone_home">
+								<input type="text" class="form-control" placeholder="Phone - Mobile :" name="phone_mobile">
+								<input type="text" class="form-control" placeholder="Fax :" name="phone_work">
+								<input type="email" class="form-control" placeholder="Email Address" name="vol_email">
+								<input type="text" class="form-control" placeholder="Mail to" name="mail_to">
+								<input type="text" class="form-control" placeholder="Address 1" name="address_1">
+								<input type="text" class="form-control" placeholder="Address 2" name="address_2">
+								<input type="text" class="form-control" placeholder="Postcode" name="postcode">
+								<input type="text" class="form-control" placeholder="Other Contact" name="other_contact">
+								<br/>
+								<label class="check_label text-center1" for="ar_7">2007 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="ar_7">
+								<label class="check_label text-center1" for="ar_8">2008 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="ar_8">
+								<label class="check_label text-center1" for="ar_9">2009 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="ar_9">
+								<label class="check_label text-center1" for="ar_10">2010 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="ar_10">
+								<label class="check_label text-center1" for="ar_11">2011 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="ar_11">
+								<label class="check_label text-center1" for="ar_12">2012 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="ar_12">
+								
+								<input type="number" class="form-control mt-2" placeholder="Bank Balance at last audit" name="balance">
+								<br/>        
+								<input type="text" class="form-control" placeholder="President" name="name_pres">
+								<input type="tel" class="form-control" placeholder="Phone - Landline :" name="phone_pres">
+								<input type="tel" class="form-control" placeholder="Phone - Mobile : " name="mobile_pres">
+								<input type="text" class="form-control" placeholder="Address" name="address_pres">
+								<br/>
+								<input type="text" class="form-control" placeholder="Vice President" name="name_vp">
+								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_vp">
+								<input type="tel" class="form-control" placeholder="Phone - Mobile :" name="mobile_vp">
+								<input type="text" class="form-control" placeholder="Address" name="address_vp">
+								<br/>
+								<input type="text" class="form-control" placeholder="Treasurer" name="name_tr">
+								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_tr">
+								<input type="tel" class="form-control" placeholder="Phone - Mobile : " name="mobile_tr">
+								<input type="text" class="form-control" placeholder="Address" name="address_tr">
+								<br/>
+								<input type="text" class="form-control" placeholder="Secretary" name="name_sec">
+								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_sec">
+								<input type="tel" class="form-control" placeholder="Phone - Mobile : " name="mobile_sec">
+								<input type="text" class="form-control" placeholder="Address" name="address_sec">                    
+								<br/>
+								<input type="text" class="form-control" placehold<label class="check_label text-center1" for="merv">MERV Trailer</label>
+								<input type="checkbox" class="form-control mt-2" value="true" name="merv">
+								<label class="check_label text-center1 mt-2" for="other">Other Trailer</label>
+								<input type="checkbox" class="form-control mt-2" value="true" name="other">
+								<input type="text" class="form-control" placeholder="Rego" name="rego_trailer">
+								<input type="text" class="form-control" placeholder="Description" name="desc_trailer">
+								<br/>
+								<label class="check_label text-center1" for="vehicle">Motor Vehicle</label>
+								<input type="checkbox" class="form-control mt-2" value="true" name="vehicle">
+								<input type="text" class="form-control mt-2" placeholder="Rego" name="rego_vehicle">
+								<input type="text" class="form-control" placeholder="Description" name="desc_vehicle">er="Notes" name="notes">
+								
+								<br/>
+								
+			
+							</div>
+						</div>
+				 </div>			
+				
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>

@@ -1,0 +1,48 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table4" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/update4">
+				<div class="form-group">
+					<input value="<%= data ? data.ID : '' %>" type="text" name="ID" hidden />
+					<div class="mb-2">
+						<label>QPS AGM Invites</label>
+						<input value="<%= data ? data.Branch : '' %>" type="text" class="form-control"
+							placeholder="Branch" name="Branch" />
+					</div>
+					<div class="mb-2">
+						<label>First_Name</label>
+						<input value="<%= data ? data.First_Name : '' %>" type="text" class="form-control" placeholder="Given Names"
+							name="First_Name" />
+					</div>
+					<div class="mb-2">
+						<label>Surname</label>
+						<input value="<%= data ? data.Surname: '' %>" type="text" class="form-control"
+							placeholder="Surname" name="Surname" />
+					</div>
+					<div class="mb-2">
+						<label>Year</label>
+						<input value="<%= data ? data.Year : '' %>" type="text" class="form-control"
+							placeholder="Year" name="Year" />
+					</div>
+					<div class="mb-2">
+						<label>Combo22</label>
+						<input value="<%= data ? data.Combo22 : '' %>" type="text" class="form-control"
+							placeholder="Award" name="Combo22" />
+					
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>

@@ -315,7 +315,7 @@ $(document).ready(function () {
 				render: function (data) {
 					return `
 						<div class="d-flex align-items-center">
-							<a href="/update1/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+							<a href="/update2/${data['ID']}" class="btn btn-dark mr-2">Update</a>
 							<button class="btn btn-danger js--btn-delete2" data-id="${data['ID']}">Delete</button>
 						</div>
 					`;
@@ -359,13 +359,13 @@ $(document).ready(function () {
 		{
 			data: null,
 			render: function(data) {
-				return data['ADDRESS_LINE_2_PO_BOXSTREET']
+				return data['ADDRESS_LINE_2_PO_BOX/STREET']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['ADDRESS_LINE_3_SUBURB_TOWN']
+				return data['ADDRESS_LINE_3_SUBURB/TOWN']
 			},
 		},
 		{
@@ -607,7 +607,7 @@ $('#table3').DataTable({
 			render: function (data) {
 				return `
 					<div class="d-flex align-items-center">
-						<a href="/update1/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+						<a href="/update3/${data['ID']}" class="btn btn-dark mr-2">Update</a>
 						<button class="btn btn-danger js--btn-delete3" data-id="${data['ID']}">Delete</button>
 					</div>
 				`;
@@ -651,13 +651,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_2_PO_BOXSTREET']
+			return data['ADDRESS_LINE_2_PO_BOX/STREET']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_3_SUBURB_TOWN']
+			return data['ADDRESS_LINE_3_SUBURB/TOWN']
 		},
 	},
 	{
@@ -853,7 +853,7 @@ $('#table4').DataTable({
 			render: function (data) {
 				return `
 					<div class="d-flex align-items-center">
-						<a href="/update1/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+						<a href="/update4/${data['ID']}" class="btn btn-dark mr-2">Update</a>
 						<button class="btn btn-danger js--btn-delete4" data-id="${data['ID']}">Delete</button>
 					</div>
 				`;
@@ -861,13 +861,13 @@ $('#table4').DataTable({
 		},{
 		data: null,
 		render: function(data) {
-			return data['Key']
+			return data['ID']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['BRANCH']
+			return data['Branch']
 		},
 	},
 	{
@@ -911,7 +911,7 @@ $('#table5').DataTable({
 			render: function (data) {
 				return `
 					<div class="d-flex align-items-center">
-						<a href="/update1/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+						<a href="/update5/${data['ID']}" class="btn btn-dark mr-2">Update</a>
 						<button class="btn btn-danger js--btn-delete5" data-id="${data['ID']}">Delete</button>
 					</div>
 				`;
@@ -1063,5 +1063,32 @@ $('#table5').DataTable({
 		}
 	})
 
+	$(document).on('change', '.js--filter', function () {
+		function condition(data) {
+			var condition = true
+			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')) {
+				condition = parseFloat(data[44]) == 1 ? true : false
+			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')) {
+				condition = parseFloat(data[45]) == 1 ? true : false
+			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked')) {
+				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 ? true : false
+			}
+			return condition
+		}
+		$.fn.dataTable.ext.search.push(
+			function (settings, data) {
+				return condition(data)
+			}
+		);
+		table1.draw();
+		$.fn.dataTable.ext.search.pop();
+	})
+
+	var expries1 = $('#expires1').DataTable({
+		ajax: '/get-data-expires1',
+		columns: [
+			...columns,
+		],
+	});
 	
 });
