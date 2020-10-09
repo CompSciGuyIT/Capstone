@@ -1,0 +1,36 @@
+{
+  "name": "node-desktop-app-template",
+  "version": "1.0.0",
+  "description": "Simple Node.js Desktop Application Template using Electron and Bootstrap",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/majikarp/node-desktop-app-template",
+  "keywords": [
+    "Electron",
+    "Node",
+    "Template",
+    "Hackathon"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "4.2.1",
+    "docxtemplater": "^3.17.9",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jquery": "3.3.1",
+    "mariadb": "^2.4.2",
+    "mysql": "^2.18.1",
+    "node": "^14.5.0",
+    "nodemon": "^2.0.2",
+    "pizzip": "^3.0.6"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.3",
+    "electron": "^4.2.12",
+    "gulp": "4.0.0"
+  }
+}

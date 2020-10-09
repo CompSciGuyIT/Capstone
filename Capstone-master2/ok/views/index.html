@@ -1,0 +1,146 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="blue-light.css">
+    <title>Form</title>
+    <style>
+      .passster-form {
+        background: #F9F9F9;
+        padding: 10px;
+        margin: 0px;
+      }
+      .passster-form h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form label {
+        font-size: 20px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form .check_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4998b3;
+      }
+      .passster-form .date_label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #4998b3;
+      }
+      .passster-form .sub_label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4998b3;
+      }
+      .passster-form .contact_label {
+        font-size: 16px;
+        font-weight: 700;
+        color: #4998b3;
+      }
+      .passster-form p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #000000;
+      }
+      .passster-form .error {
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #CC4C43;
+      }
+      .passster-form #passster_submit {
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #4998b3;
+      }
+      .passster-form #passster_submit:hover {
+        font-weight: 400;
+        color: #FFFFFF;
+        background: #aa1100;
+      }
+      .img
+      {
+      display:block;
+      margin-left:10px;
+      margin-right:auto;
+      position: relative;
+      top: 20px;
+      }
+      .inlinez {
+        vertical-align: left;
+      }
+      .post-thumb img {
+    float:left;
+    clear:left;
+    width:130px;
+    height:130px;
+
+}
+
+.text-center1{
+ text-align: center;
+}
+
+.bg_test { 
+  
+  background-image:url(../public/pictures/backgroundImg2.jpg);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.bg { 
+  background-color: #e8ecef;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.text-custom1 {
+	font-size: 16px;
+        font-weight: 700;
+        color: #4998b3;
+}
+
+.text-custom2 {
+	font-size: 20px;
+        font-weight: 800;
+        color: #4998b3;
+}
+
+    </style>
+</head>
+<div class = "bg d-flex align-items-center justify-content-center my-4">
+	<img src="../public/pictures/blue_light.jpg" class="img-fluid">
+</div>
+<div class="bg menu">
+	<div class="container">
+		<div class="row py-2 align-items-end">
+			<div class="col-9">
+				<label class="text-custom2"for="inputGroupSelect01">Choose your table</label>
+				<select class="text-custom1 custom-select js--tableName" id="inputGroupSelect01">
+					<option class="text-custom1" value="/table1">Volunteer</option>
+					<option class="text-custom1" value="/table2">Affiliate</option>
+					<option class="text-custom1" value="/table3">Associate</option>
+					<option class="text-custom1" value="/table4">Award Recipients</option>
+					<option class="text-custom1" value="/table5">QPS_AGM_Invites</option>
+				</select>
+			</div>
+			<div class="col-6">
+				<div class="d-flex mt-3">
+					<button type="button" class="btn-info btn-lg js--goToTable">Go</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>
