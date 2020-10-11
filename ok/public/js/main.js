@@ -281,6 +281,12 @@ var columns = [{
 		return data['ON_BC_LIST']
 	},
 },
+{
+	data: null,
+	render: function (data) {
+		return data['Deceased']
+	},
+},
 ]
 
 
@@ -360,19 +366,19 @@ columns: [
 		{
 			data: null,
 			render: function(data) {
-				return data['ADDRESS_LINE_1_STATION/BRANCH']
+				return data['ADDRESS_LINE_1_STATION_BRANCH']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['ADDRESS_LINE_2_PO_BOX/STREET']
+				return data['ADDRESS_LINE_2_PO_BOX_STREET']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['ADDRESS_LINE_3_SUBURB/TOWN']
+				return data['ADDRESS_LINE_3_SUBURB_TOWN']
 			},
 		},
 		{
@@ -420,91 +426,121 @@ columns: [
 		{
 			data: null,
 			render: function(data) {
-				return data['PRESIDENT']
+				return data['name_pres']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['PRES_PHONE']
+				return data['phone_pres']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['PRES_ADDRESS']
+				return data['address_pres']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['VICE_PRESIDENT']
+				return data['name_vp']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['V/P_Phone']
+				return data['phone_vp']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['V/P_Address']
+				return data['address_vp']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['SECRETARY']
+				return data['name_sec']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Sec_Phone']
+				return data['phone_sec']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Sec_Address']
+				return data['address_sec']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['TREASURER']
+				return data['name_tr']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Tres_Phone']
+				return data['phone_tr']
 			},
 		},
 		{
 			data: null,
 			render: function (data) {
-				return data['Tres_Address']
+				return data['address_tr']
 			}
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Check59']
+				return data['Insurance_Levy_Paid']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['2008_A']
+				return data['ar_7']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Check63']
+				return data['ar_8']
+			},
+		},
+		{
+			data: null,
+			render: function(data) {
+				return data['ar_9']
+			},
+		},
+		{
+			data: null,
+			render: function(data) {
+				return data['ar_10']
+			},
+		},
+		{
+			data: null,
+			render: function(data) {
+				return data['ar_11']
+			},
+		},
+		{
+			data: null,
+			render: function(data) {
+				return data['ar_12']
+			},
+		},
+		{
+			data: null,
+			render: function(data) {
+				return data['balance']
 			},
 		},
 		{
@@ -516,79 +552,49 @@ columns: [
 		{
 			data: null,
 			render: function(data) {
-				return data['Text69']
+				return data['Notes']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Text72']
+				return data['merv']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Check75']
+				return data['other']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Check79']
+				return data['rego_trailer']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Text81']
+				return data['desc_trailer']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Text83']
+				return data['vehicle']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Check85']
+				return data['rego_vehicle']
 			},
 		},
 		{
 			data: null,
 			render: function(data) {
-				return data['Text87']
-			},
-		},
-		{
-			data: null,
-			render: function(data) {
-				return data['Text89']
-			},
-		},
-		{
-			data: null,
-			render: function(data) {
-				return data['Combo91']
-			},
-		},
-		{
-			data: null,
-			render: function(data) {
-				return data['Check94']
-			},
-		},
-		{
-			data: null,
-			render: function(data) {
-				return data['Check100']
-			},
-		},
-		{
-			data: null,
-			render: function(data) {
-				return data['Check102']
+				return data['desc_vehicle']
 			},
 		},
 		
@@ -898,7 +904,7 @@ $('#table4').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Combo22']
+			return data['Award']
 		},
 	},
 ],
@@ -1073,12 +1079,21 @@ $('#table5').DataTable({
 	$(document).on('change', '.js--filter', function () {
 		function condition(data) {
 			var condition = true
-			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')) {
+			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')&& !$('.js--filter3').is(':checked')) {
 				condition = parseFloat(data[44]) == 1 ? true : false
-			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')) {
+			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')&& !$('.js--filter3').is(':checked')) {
 				condition = parseFloat(data[45]) == 1 ? true : false
-			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked')) {
+			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && !$('.js--filter3').is(':checked')) {
 				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 ? true : false
+			}else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
+				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 &&  parseFloat(data[46]) == 1? true : false
+			}else if (!$('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
+				condition = parseFloat(data[45]) == 1 &&  parseFloat(data[46]) == 1? true : false
+			}else if (!$('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
+				condition = parseFloat(data[46]) == 1? true : false
+			}
+			else if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
+				condition = parseFloat(data[44]) == 1 && parseFloat(data[46]) == 1? true : false
 			}
 			return condition
 		}
