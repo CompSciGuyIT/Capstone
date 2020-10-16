@@ -26,7 +26,7 @@ router.get('/table1', function (req, res) {
   res.render('table1');
 });
 router.get('/get-data-table1', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
+  con.query("SELECT * FROM volunteerr1", function (err, result) {
     if (err) throw err;
     res.send({
       data: result,
@@ -39,17 +39,28 @@ router.get('/expires1', function (req, res) {
   res.render('expires1');
 });
 router.get('/get-data-expires1', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
+  con.query("SELECT * FROM volunteerr1", function (err, result) {
     if (err) throw err;
     //const data = result.filter(item => Math.abs(moment(item.B_C_Expiry_Date).diff(moment(), 'days')) <= 7)
     const data = result.filter(item => ((moment(item.B_C_Expiry_Date).diff(moment(), 'days') <= 7) && (moment(item.B_C_Expiry_Date).diff(moment(), 'days') > 0)))
         res.send({
-      data,
+        data,
     })
   });
 });
+router.get('/a', function (req, res) {
+  con.query("SELECT * FROM volunteerr1", function (err, result) {
+    if (err) throw err;
+    const text = result.filter(item => ((moment(item.B_C_Expiry_Date).diff(moment(), 'days') <= 7) && (moment(item.B_C_Expiry_Date).diff(moment(), 'days') > 0)))
+    console.log(text)
+    console.log(text.Blue_Light_Branch);
+    ;
+  });
+});
+
+
 router.get('/get-data-table1', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
+  con.query("SELECT * FROM volunteerr1", function (err, result) {
     if (err) throw err;
     res.send({
       data: result,
@@ -77,7 +88,7 @@ router.post('/create1', function (req, res) {
       `'${element}'`
     ]
   }
-  const sql = "INSERT INTO Volunteers (" + colArray.join(', ') + ") VALUES (" + dataArray.join(', ') + ")";
+  const sql = "INSERT INTO volunteerr1 (" + colArray.join(', ') + ") VALUES (" + dataArray.join(', ') + ")";
   con.query(sql, function (err) {
     if (err) throw err;
     console.log("1 record inserted into volunteerr table");
@@ -85,7 +96,7 @@ router.post('/create1', function (req, res) {
   });
 });
 router.get('/update1/:id', function (req, res) {
-  const sql = "SELECT * FROM Volunteers WHERE ID = '" + req.params.id + "'";
+  const sql = "SELECT * FROM volunteerr1 WHERE ID = '" + req.params.id + "'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     res.render('update1', { title: 'Update', data: result[0] });
@@ -100,7 +111,7 @@ router.post('/update1', function (req, res) {
       `${key} = '${element}'`
     ]
   }
-  const sql = "UPDATE Volunteers SET " + colArray.join(', ') + " WHERE ID = '" + req.body['ID'] + "'";
+  const sql = "UPDATE volunteerr1 SET " + colArray.join(', ') + " WHERE ID = '" + req.body['ID'] + "'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result.affectedRows + " record(s) updated");
@@ -109,7 +120,7 @@ router.post('/update1', function (req, res) {
 });
 router.post('/delete1', function (req, res) {
   const { id } = req.body
-  const sql = "DELETE FROM Volunteers WHERE ID = '" + id + "'";
+  const sql = "DELETE FROM volunteerr1 WHERE ID = '" + id + "'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Number of records deleted in volunteer table: " + result.affectedRows);

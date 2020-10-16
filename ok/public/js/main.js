@@ -1110,7 +1110,42 @@ $('#table5').DataTable({
 		ajax: '/get-data-expires1',
 		columns: [
 			...columns,
+			
+			
 		],
+	
 	});
+	// $(document).on('click', '.abc', function () {
+	// 	//alert("abc");
+	// 	$.ajax({
+	// 		url:'/get-data-expires1',
+	// 		type:'GET',
+	// 		contentType: "application/json",
+	// 		dataType: 'json',
+	// 		success: function(result){
+	// 			console.log(result);
+	// 			alert("abc");
+
+	// 		}
+	// 	})
+	// })
+	$(document).on('click', '.abc', function () {
+		//alert("abc");
+		$.ajax({
+			url:'/a',
+			type:'GET',
+			contentType: "application/json",
+			dataType: 'json',
+			success: function(result){
+				alert("test");
+
+			}
+		})
+	})
+
+	
+	
+
+	
 	
 });
