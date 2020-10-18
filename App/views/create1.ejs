@@ -1,0 +1,205 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table1" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/create1">
+				<div class="form-group">
+					<div class="mb-2">
+						<label>Branch</label>
+						<input type="text" class="form-control" placeholder="Blue Light Branch" name="Branch" />
+					</div>
+					<div class="mb-2">
+						<label>Surname</label>
+						<input type="text" class="form-control" placeholder="Surname" name="Surname" />
+					</div>
+					<div class="mb-2">
+						<label>First Names</label>
+						<input type="text" class="form-control" placeholder="First Names" name="First_Names" />
+					</div>
+					<div class="mb-2">
+						<label>Address Line 1</label>
+						<input type="text" class="form-control" placeholder="Address Line 1" name="Address_Line_1" />
+					</div>
+					<div class="mb-2">
+						<label>Address Line 2</label>
+						<input type="text" class="form-control" placeholder="Address Line 2" name="Address_Line_2" />
+					</div>
+					<div class="mb-2">
+						<label>Phone Home</label>
+						<input type="text" class="form-control" placeholder="Phone Home" name="Phone_Home" />
+					</div>
+					<div class="mb-2">
+						<label>Phone Work</label>
+						<input type="text" class="form-control" placeholder="Phone Work" name="Phone_Work" />
+					</div>
+					<div class="mb-2">
+						<label>Phone Mobile</label>
+						<input type="text" class="form-control" placeholder="Phone Mobile" name="Phone_Mobile" />
+					</div>
+					<div class="mb-2">
+						<label>Email</label>
+						<input type="text" class="form-control" placeholder="Email" name="Email" />
+					</div>
+					<div class="mb-2">
+						<label>DOB</label>
+						<input type="date" class="form-control" placeholder="DOB" name="DOB" />
+					</div>
+					<div class="mb-2">
+						<label>Drivers Licence</label>
+						<input type="text" class="form-control" placeholder="Drivers Licence" name="Drivers_Licence" />
+					</div>
+					<div class="mb-2">
+						<label>Class</label>
+						<input type="text" class="form-control" placeholder="Class" name="Class" />
+					</div>
+					<div class="mb-2">
+						<label>Expiry_Date</label>
+						<input type="date" class="form-control" placeholder="Expiry_Date" name="Expiry_Date" />
+					</div>
+					<div class="mb-2">
+						<label>Current Position</label>
+						<input type="text" class="form-control" placeholder="Current Position" name="Current_Position" />
+					</div>
+					<div class="mb-2">
+						<label>Organisation</label>
+						<input type="text" class="form-control" placeholder="Organisation" name="Organisation" />
+					</div>
+					<div class="mb-2">
+						<label>Main Responsibilities</label>
+						<input type="text" class="form-control" placeholder="Main Responsibilities" name="Main_Responsibilities" />
+					</div>
+					<div class="mb-2">
+						<label>Referee 1</label>
+						<input type="text" class="form-control" placeholder="Referee 1" name="Referee_1" />
+					</div>
+					<div class="mb-2">
+						<label>Ref1 Relationship</label>
+						<input type="text" class="form-control" placeholder="Ref1 Relationship" name="Ref1_Relationship" />
+					</div>
+					<div class="mb-2">
+						<label>Ref1 Phone</label>
+						<input type="text" class="form-control" placeholder="Ref1 Phone" name="Ref1_Phone" />
+					</div>
+					<div class="mb-2">
+						<label>Referee 2</label>
+						<input type="text" class="form-control" placeholder="Referee 2" name="Referee_2" />
+					</div>
+					<div class="mb-2">
+						<label>Ref2 Relationship</label>
+						<input type="text" class="form-control" placeholder="Ref2 Relationship" name="Ref2_Relationship" />
+					</div>
+					<div class="mb-2">
+						<label>Ref2 Phone</label>
+						<input type="text" class="form-control" placeholder="Ref2 Phone" name="Ref2_Phone" />
+					</div>
+					<div class="mb-2">
+						<label>Pre-existing Medical Cond</label>
+						<select class="custom-select" name="Preexisting_Medical_Cond">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
+					</div>
+					<div class="mb-2">
+						<label>If Yes, Details</label>
+						<input type="text" class="form-control" placeholder="If Yes, Details" name="If_Yes_Details" />
+					</div>
+					<div class="mb-2">
+						<label>Blue Card .</label>
+						<input type="text" class="form-control" placeholder="Blue Card ." name="Blue_Card" />
+					</div>
+					<div class="mb-2">
+						<label>Issue_Date</label>
+						<input type="date" class="form-control" placeholder="Issue_Date" name="Issue_Date" />
+					</div>
+					<div class="mb-2">
+						<label>Issed by BL</label>
+						<input type="text" class="form-control" placeholder="Issed by BL" name="Issed_by_BL" />
+					</div>
+					<div class="mb-2">
+						<label>If No, Verified</label>
+						<input type="text" class="form-control" placeholder="If No, Verified" name="If_No_Verified" />
+					</div>
+					<div class="mb-2">
+						<label>B_C_Expiry_Date</label>
+						<input type="date" class="form-control" placeholder="B_C_Expiry_Date" name="B_C_Expiry_Date" />
+					</div>
+					<div class="mb-2">
+						<label>Emergency Contact 1</label>
+						<input type="text" class="form-control" placeholder="Emergency Contact 1" name="Emergency_Contact_1" />
+					</div>
+					<div class="mb-2">
+						<label>EC1 Relationship</label>
+						<input type="text" class="form-control" placeholder="EC1 Relationship" name="EC1_Relationship" />
+					</div>
+					<div class="mb-2">
+						<label>EC1 Phone</label>
+						<input type="text" class="form-control" placeholder="EC1 Phone" name="EC1_Phone" />
+					</div>
+					<div class="mb-2">
+						<label>EC1 Phone Wk</label>
+						<input type="text" class="form-control" placeholder="EC1 Phone Wk" name="EC1_Phone_Wk" />
+					</div>
+					<div class="mb-2">
+						<label>EC1 Mobile</label>
+						<input type="text" class="form-control" placeholder="EC1 Mobile" name="EC1_Mobile" />
+					</div>
+					<div class="mb-2">
+						<label>Emergency Contact 2</label>
+						<input type="text" class="form-control" placeholder="Emergency Contact 2" name="Emergency_Contact_2" />
+					</div>
+					<div class="mb-2">
+						<label>EC2 Relationship</label>
+						<input type="text" class="form-control" placeholder="EC2 Relationship" name="EC2_Relationship" />
+					</div>
+					<div class="mb-2">
+						<label>EC2 Phone</label>
+						<input type="text" class="form-control" placeholder="EC2 Phone" name="EC2_Phone" />
+					</div>
+					<div class="mb-2">
+						<label>EC2 Phone Wk</label>
+						<input type="text" class="form-control" placeholder="EC2 Phone Wk" name="EC2_Phone_Wk" />
+					</div>
+					<div class="mb-2">
+						<label>EC2 Mobile</label>
+						<input type="text" class="form-control" placeholder="EC2 Mobile" name="EC2_Mobile" />
+					</div>
+					<div class="mb-2">
+						<label>POI Documents sighted</label>
+						<input type="text" class="form-control" placeholder="POI Documents sighted" name="POI_Documents_sighted" />
+					</div>
+					<div class="mb-2">
+						<label>Latest Award</label>
+						<input type="text" class="form-control" placeholder="Latest Award" name="Latest_Award" />
+					</div>
+					<div class="mb-2">
+						<label>Year Received</label>
+						<input type="text" class="form-control" placeholder="Year Received" name="Year_Received" />
+					</div>
+					<div class="mb-2">
+						<label>File Notes</label>
+						<input type="text" class="form-control" placeholder="File Notes" name="File_Notes" />
+					</div>
+					<div class="mb-2">
+						<label>Redundant</label>
+						<input type="text" class="form-control" placeholder="Redundant" name="Redundant" />
+					</div>
+					<div class="mb-2">
+						<label>ON BC LIST</label>
+						<input type="text" class="form-control" placeholder="ON BC LIST" name="ON_BC_LIST" />
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>

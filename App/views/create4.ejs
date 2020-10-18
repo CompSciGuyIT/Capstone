@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table4" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/create4">
+				<div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Award Recipment</label>
+                            <div id="AwardRecipment_field">
+									<input type="text" class="form-control" placeholder="Branch" name="Branch">
+									<input type="text" class="form-control" placeholder="Given Names" name="First_Name">
+									<input type="text" class="form-control" placeholder="Surname" name="Surname">
+									<input type="text" class="form-control" placeholder="Award" name="Award">
+									<input type="text" class="form-control" placeholder="Year" name="Year">
+                            </div>
+                        </div>
+                    </div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>
