@@ -45,7 +45,7 @@ router.get('/expires1', function (req, res) {
 router.get('/get-data-expires1', function (req, res) {
   con.query("SELECT * FROM Volunteers", function (err, result) {
     if (err) throw err;
-    const data = result.filter(item => ((moment(item.B_C_Expiry_Date).diff(moment(), 'days') <= 30) && (moment(item.B_C_Expiry_Date).diff(moment(), 'days') > 0)))
+    const data = result.filter(item => ((moment(item.BC_Expiry_Date).diff(moment(), 'days') <= 30) && (moment(item.BC_Expiry_Date).diff(moment(), 'days') > 0)))
         res.send({
         data,
     })
@@ -54,7 +54,7 @@ router.get('/get-data-expires1', function (req, res) {
 router.get('/a', function (req, res) {
   con.query("SELECT * FROM Volunteers", function (err, result) {
     if (err) throw err;
-    const text = result.filter(item => ((moment(item.B_C_Expiry_Date).diff(moment(), 'days') <= 30) && (moment(item.B_C_Expiry_Date).diff(moment(), 'days') > 0)))
+    const text = result.filter(item => ((moment(item.BC_Expiry_Date).diff(moment(), 'days') <= 30) && (moment(item.BC_Expiry_Date).diff(moment(), 'days') > 0)))
     console.log(text)
     console.log(text.Branch);
     ;
