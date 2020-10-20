@@ -10,7 +10,7 @@ const con = mysql.createConnection({
 const moment = require('moment')
 
 con.connect(function (err) {
-  //if (err) throw err;
+  if (err) throw err;
   console.log('Connected!!!');
 });
 
@@ -21,6 +21,13 @@ con.on('error', function(err) {
 router.get('/', function (req, res) {
   res.render('index', { title: 'Home Page' });
 });
+
+// Making a query every 5 seconds ensures  
+// that the connection will remain alive and 
+// PROTOCOL_CONNECTION_LOST does not occur
+setInterval(function () {
+  con.query('SELECT 1');
+}, 5000);
 
 
 
