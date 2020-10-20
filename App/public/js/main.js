@@ -271,7 +271,7 @@ columns: [
 	{
 		data: null,
 		render: function (data) {
-			return data['POI_Documents_sighted']
+			return data['POI_Documents_Sighted']
 		},
 	},
 	{
