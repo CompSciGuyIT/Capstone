@@ -1,0 +1,35 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table5" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/create5">
+				<div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>QPS AGM Invites</label>
+                            <div id="qps_fields">
+                                <input type="text" class="form-control" placeholder="Title" name="Title">
+                                <input type="text" class="form-control" placeholder="Given Names" name="FirstName">
+                                <input type="text" class="form-control" placeholder="Surname" name="Surname">
+                                <input type="text" class="form-control" placeholder="Region" name="Region">
+                                <input type="text" class="form-control" placeholder="Address1" name="Address1">
+                                <input type="text" class="form-control" placeholder="Address2" name="Address2">
+                                <input type="text" class="form-control" placeholder="State" name="State">
+                                <input type="text" class="form-control" placeholder="Postcode" name="Postcode">
+                            </div>
+                        </div>
+                    </div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>

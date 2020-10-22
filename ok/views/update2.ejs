@@ -29,6 +29,8 @@
 				<input value="<%= data ? data.ADDRESS_LINE_3_SUBURB_TOWN : '' %>"" type="text" class="form-control" placeholder="Postcode" name="ADDRESS_LINE_3_SUBURB_TOWN">
 				<input value="<%= data ? data.OTHER_CONTACTS: '' %>""  type="text" class="form-control" placeholder="Other Contact" name="OTHER_CONTACTS">
 				<br/>
+				<b> Trailer</b>
+				<br/>
 				<label class="check_label text-center1" for="ar_7">2007 Audit Recd</label>
 				<input value="<%= data ? data.ar_7: '' %>"" type="checkbox" class="form-control" placeholder="2007 Audit Recd" name="ar_7">
 				<label class="check_label text-center1" for="ar_8">2008 Audit Recd</label>
@@ -41,6 +43,7 @@
 				<input value="<%= data ? data.ar_11: '' %>"" type="checkbox" class="form-control" placeholder="2011 Audit Recd" name="ar_11">
 				<label class="check_label text-center1" for="ar_12">2012 Audit Recd</label>
 				<input value="<%= data ? data.ar_12: '' %>"" type="checkbox" class="form-control" placeholder="2012 Audit Recd" name="ar_12">
+				<b> Bank Balance</b>
 
 				<input value="<%= data ? data.balance: '' %>"" type="text" class="form-control mt-2" placeholder="Bank Balance at last audit" name="balance">
 				
@@ -73,7 +76,7 @@
 				<br/>
 				<b> Trailer</b>
 				<input value="<%= data ? data.merv: '' %>"" type="checkbox" class="form-control mt-2" value="true" name="merv">
-				<label class="check_label text-center1 mt-2" for="other"><b>Other Trailer </b></label>
+				<label class="check_label text-center1 mt-2" for="other"><b>Other Trailer </b><br/></label>
 				<input value="<%= data ? data.other: '' %>"" type="checkbox" class="form-control mt-2" value="true" name="other">
 				<input  value="<%= data ? data.rego_trailer: '' %>"" type="text" class="form-control" placeholder="Rego" name="rego_trailer">
 				<input value="<%= data ? data.desc_trailer: '' %>"" type="text" class="form-control" placeholder="Description" name="desc_trailer">

@@ -15,9 +15,14 @@
 				<div class="form-group">
 					<input value="<%= data ? data.ID : '' %>" type="text" name="ID" hidden />
 					<div class="mb-2">
+							<label>Blue Light Branch</label>
+							<input value="<%= data ? data.Form_ID : '' %>" type="text" class="form-control"
+								placeholder="Form_ID" name="Form_ID" />
+						</div>
+					<div class="mb-2">
 						<label>Blue Light Branch</label>
 						<input value="<%= data ? data.Blue_Light_Branch : '' %>" type="text" class="form-control"
-							placeholder="Blue Light Branch" name="Blue_Light_Branch" />
+							placeholder="Blue Light Branch" name="Branch" />
 					</div>
 					<div class="mb-2">
 						<label>Surname</label>
@@ -133,8 +138,8 @@
 					</div>
 					<div class="mb-2">
 						<label>If Yes, Details</label>
-						<input value="<%= data ? data.If_Yes_Details : '' %>" type="text" class="form-control"
-							placeholder="If Yes, Details" name="If_Yes_Details" />
+						<input value="<%= data ? data.Medical_Cond_Details : '' %>" type="text" class="form-control"
+							placeholder="Medical_Cond_Details" name="Medical_Cond_Details" />
 					</div>
 					<div class="mb-2">
 						<label>Blue Card .</label>
@@ -153,8 +158,8 @@
 					</div>
 					<div class="mb-2">
 						<label>If No, Verified</label>
-						<input value="<%= data ? data.If_No_Verified : '' %>" type="text" class="form-control"
-							placeholder="If No, Verified" name="If_No_Verified" />
+						<input value="<%= data ? data.Verified : '' %>" type="text" class="form-control"
+							placeholder="If No, Verified" name="Verified" />
 					</div>
 					<div class="mb-2">
 						<label>B_C_Expiry_Date</label>
@@ -246,6 +251,7 @@
 						<input value="<%= data ? data.ON_BC_LIST : '' %>" type="text" class="form-control" placeholder="ON BC LIST"
 							name="ON_BC_LIST" />
 					</div>
+					
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>

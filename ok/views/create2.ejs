@@ -3,7 +3,8 @@
 	<div class="container-fluid">
 		<div class="row py-2 align-items-end">
 			<div class="col-6">
-				<a href="/table2" class="btn btn-secondary">Back</a>
+				
+			<a href="/table2" class="btn btn-secondary">Back</a>
 			</div>
 		</div>
 	</div>
@@ -26,7 +27,7 @@
 								<input type="text" class="form-control" placeholder="Branch Name" name="BRANCH">
 								<input type="text" class="form-control" placeholder="Region" name="REGION">
 								<label class="check_label" for="member_since">Affiliate Since</label>
-								<input type="date" class="form-control" placeholder="Date of Association" name="Affiliated_Since">
+								<input type="tex" class="form-control" placeholder="Date of Association" name="Affiliated_Since">
 								<input type="text" class="form-control" placeholder="Note" name="Notes">
 								<input type="text" class="form-control" placeholder="Coordinator" name="COORDINATOR">
 								<input type="text" class="form-control" placeholder="Phone - Landline :" name="PHONE">
@@ -40,6 +41,7 @@
 								<input type="text" class="form-control" placeholder="Address 3" name="ADDRESS_LINE_3_SUBURB_TOWN">
 								<input type="text" class="form-control" placeholder="Other Contact" name="OTHER_CONTACTS">
 								<br/>
+								<b>Audit Record</b><br/>
 								<label class="check_label text-center1" for="ar_7">2007 Audit Recd</label>
 								<input type="checkbox" class="form-control" value="true" name="ar_7">
 								<label class="check_label text-center1" for="ar_8">2008 Audit Recd</label>
@@ -52,33 +54,44 @@
 								<input type="checkbox" class="form-control" value="true" name="ar_11">
 								<label class="check_label text-center1" for="ar_12">2012 Audit Recd</label>
 								<input type="checkbox" class="form-control" value="true" name="ar_12">
-								
-								<input type="number" class="form-control mt-2" placeholder="Bank Balance at last audit" name="balance">
-								<br/>        
+								<b>Bank Balance</b>
+
+								<input type="text" class="form-control mt-2" placeholder="Bank Balance at last audit" name="balance">
+								<br/>      
+								<b>President</b>
+  
 								<input type="text" class="form-control" placeholder="President" name="name_pres">
 								<input type="tel" class="form-control" placeholder="Phone - Landline :" name="phone_pres">
 								<input type="text" class="form-control" placeholder="Address" name="address_pres">
 								<br/>
+								<b>Vice President</b>
+
 								<input type="text" class="form-control" placeholder="Vice President" name="name_vp">
 								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_vp">
 								<input type="text" class="form-control" placeholder="Address" name="address_vp">
 								<br/>
+								<b>Treasurer</b>
+
 								<input type="text" class="form-control" placeholder="Treasurer" name="name_tr">
 								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_tr">
 								<input type="text" class="form-control" placeholder="Address" name="address_tr">
 								<br/>
+								<b>Secretary</b>
+
 								<input type="text" class="form-control" placeholder="Secretary" name="name_sec">
 								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="phone_sec">
 								<input type="text" class="form-control" placeholder="Address" name="address_sec">          
 								<input type="text" class="form-control" placeholder="Insurance Levy Paid" name="Insurance_Levy_Paid">          
 								<br/>
-								<input type="text" class="form-control" placehold<label class="check_label text-center1" for="merv">MERV Trailer</label>
+								<b> Trailer</b>
+								<input type="text" class="form-control" placehold <label class="check_label text-center1" for="merv">MERV Trailer</label>
 								<input type="checkbox" class="form-control mt-2" value="true" name="merv">
-								<label class="check_label text-center1 mt-2" for="other">Other Trailer</label>
+								<label class="check_label text-center1 mt-2" for="other">Other Trailer</label><br/>
 								<input type="checkbox" class="form-control mt-2" value="true" name="other">
 								<input type="text" class="form-control" placeholder="Rego" name="rego_trailer">
 								<input type="text" class="form-control" placeholder="Description" name="desc_trailer">
 								<br/>
+								<b> Vehicle</b>
 								<label class="check_label text-center1" for="vehicle">Motor Vehicle</label>
 								<input type="checkbox" class="form-control mt-2" value="true" name="vehicle">
 								<input type="text" class="form-control mt-2" placeholder="Rego" name="rego_vehicle">

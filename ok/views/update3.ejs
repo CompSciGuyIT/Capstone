@@ -1,0 +1,39 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				<a href="/table3" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+	</div><div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/update2">
+                <input value="<%= data ? data.BRANCH : '' %>" type="text" class="form-control" placeholder="Branch Name" name="BRANCH">
+                <input value="<%= data ? data.MEMBERSHIP : '' %>" type="text" class="form-control" placeholder="Membership" name="MEMBERSHIP">
+                <input value="<%= data ? data.REGION : '' %>" type="text" class="form-control" placeholder="Region" name="REGION">
+                <input value="<%= data ? data.MAIL_CONTACT : '' %>" type="text" class="form-control" placeholder="MAIL_CONTACT :" name="MAIL_CONTACT">
+                <input value="<%= data ? data.Notes : '' %>" type="text" class="form-control" placeholder="Note" name="Notes">
+                <input value="<%= data ? data.COORDINATOR : '' %>" type="text" class="form-control" placeholder="Coordinator" name="COORDINATOR">
+                <input value="<%= data ? data.PHONE : '' %>" type="text" class="form-control" placeholder="Phone - Landline :" name="PHONE">
+                <input value="<%= data ? data.HOME : '' %>" type="text" class="form-control" placeholder="Phone - Home :" name="HOME">
+                <input value="<%= data ? data.MOBILE : '' %>" type="text" class="form-control" placeholder="Phone - Mobile :" name="MOBILE">
+
+                <input value="<%= data ? data.FAX: '' %>"" type="text" class="form-control" placeholder="Fax :" name="FAX">
+                <input value="<%= data ? data.EMAIL: '' %>"" type="text" class="form-control" placeholder="EMAIL" name="EMAIL">
+    			<input value="<%= data ? data.OTHER_CONTACTS: '' %>"" type="text" class="form-control" placeholder="Other Contact" name="OTHER_CONTACTS">
+				<input value="<%= data ? data.Date_of_Association: '' %>"" type="text" class="form-control" placeholder="Date_of_Association" name="Date_of_Association">
+                <br/>
+                
+                
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+<%- include('footer'); -%>

@@ -14,7 +14,13 @@ var columns = [{
 {
 	data: null,
 	render: function (data) {
-		return data['Blue_Light_Branch']
+		return data['Form_ID']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Branch']
 	},
 },
 {
@@ -152,7 +158,7 @@ var columns = [{
 {
 	data: null,
 	render: function (data) {
-		return data['If_Yes_Details']
+		return data['Preexisting_Medical_Cond']
 	},
 },
 {
@@ -176,7 +182,7 @@ var columns = [{
 {
 	data: null,
 	render: function (data) {
-		return data['If_No_Verified']
+		return data['Verified']
 	},
 },
 {
@@ -297,7 +303,6 @@ var columns = [{
 var table1 = $('#table1').DataTable({
 ajax: '/get-data-table1',
 columns: [
-	...columns,
 	{
 		data: null,
 		render: function (data) {
@@ -309,6 +314,8 @@ columns: [
 			`;
 		}
 	},
+	...columns,
+	
 ],
 });
 
@@ -790,55 +797,103 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Text72']
+			return data['Notes']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Check75']
+			return data['MERV_Trailer']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Check79']
+			return data['Other_Trailer_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text81']
+			return data['Trailer_Rego_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text83']
+			return data['Trailer_Description_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Check85']
+			return data['Motor_Vehicle_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text87']
+			return data['MV_Rego_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text89']
+			return data['MV_Description_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text91']
+			return data['Other_Trailer_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Trailer_Rego_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Trailer_Description_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Motor_Vehicle_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['MV_Rego_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['MV_Description_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Date_of_Association']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['2011_Audit_Received']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['2012_Audit_Received']
 		},
 	},
 
@@ -1080,20 +1135,20 @@ $('#table5').DataTable({
 		function condition(data) {
 			var condition = true
 			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')&& !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 ? true : false
+				condition = parseFloat(data[46]) == 1 ? true : false
 			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')&& !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 ? true : false
+				condition = parseFloat(data[47]) == 1 ? true : false
 			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 ? true : false
+				condition = parseFloat(data[45]) == 1 && parseFloat(data[46]) == 1 ? true : false
 			}else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 &&  parseFloat(data[46]) == 1? true : false
+				condition = parseFloat(data[45]) == 1 && parseFloat(data[46]) == 1 &&  parseFloat(data[46]) == 1? true : false
 			}else if (!$('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 &&  parseFloat(data[46]) == 1? true : false
+				condition = parseFloat(data[46]) == 1 &&  parseFloat(data[47]) == 1? true : false
 			}else if (!$('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[46]) == 1? true : false
+				condition = parseFloat(data[48]) == 1? true : false
 			}
 			else if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 && parseFloat(data[46]) == 1? true : false
+				condition = parseFloat(data[45]) == 1 && parseFloat(data[47]) == 1? true : false
 			}
 			return condition
 		}

@@ -1,0 +1,109 @@
+<%- include('header'); -%>
+<div class="menu bg-light fixed-top">
+	<div class="container-fluid">
+		<div class="row py-2 align-items-end">
+			<div class="col-6">
+				
+			<a href="/table2" class="btn btn-secondary">Back</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bg">
+	<div class="container col-md-6" style=" margin-top:20px;">
+	  <div class="jumbotron">
+		<div class="post-thumb">
+		<img src="blue_light.jpg" alt="blue light">
+		</div> 
+		<h1 class="text-info" ><center>Queensland Blue Light Affiliate Form</center></h1>
+	</div><div class="container-fluid" style="margin-top: 80px">
+	<div class="row">
+		<div class="col-12">
+			<form class="border border-light p-5" method="post" action="/create2">
+				<div class="form-row">
+						<div class="form-group col-md-9">
+							<label>Associate_Members</label>
+							<div id="Associate_fields">
+                                <input type="text" class="form-control" placeholder="Branch Name" name="BRANCH">
+                                <input type="text" class="form-control" placeholder="Membership" name="MEMBERSHIP">
+								<input type="text" class="form-control" placeholder="Region" name="REGION">
+								<input type="text" class="form-control" placeholder="MAIL_CONTACT :" name="MAIL_CONTACT">
+								<input type="text" class="form-control" placeholder="Note" name="Notes">
+								<input type="text" class="form-control" placeholder="Coordinator" name="COORDINATOR">
+								<input type="text" class="form-control" placeholder="Phone - Landline :" name="PHONE">
+								<input type="text" class="form-control" placeholder="Phone - Home :" name="HOME">
+								<input type="text" class="form-control" placeholder="Phone - Mobile :" name="MOBILE">
+
+								<input type="text" class="form-control" placeholder="Fax :" name="FAX">
+								<input type="text" class="form-control" placeholder="EMAIL" name="EMAIL">
+								<input type="text" class="form-control" placeholder="STATION/BRANCH" name="ADDRESS_LINE_1_STATION/BRANCH">
+								<input type="text" class="form-control" placeholder="PO_BOX/STREET" name="ADDRESS_LINE_2_PO_BOX/STREET">
+								<input type="text" class="form-control" placeholder="SUBURB/TOWN " name="ADDRESS_LINE_3_SUBURB/TOWN">
+								<input type="text" class="form-control" placeholder="Other Contact" name="OTHER_CONTACTS">
+								<input type="text" class="form-control" placeholder="Date_of_Association" name="Date_of_Association">
+
+								<br/>
+								<b>Audit Received</b>
+								<label class="check_label text-center1" for="2011_Audit_Received">2011 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="2011_Audit_Received">
+								<label class="check_label text-center1" for="2012_Audit_Received">2012 Audit Recd</label>
+								<input type="checkbox" class="form-control" value="true" name="2012_Audit_Received">
+								
+								<br/>    
+								<b>PRESIDENT</b>    
+								<input type="text" class="form-control" placeholder="President" name="PRESIDENT">
+								<input type="tel" class="form-control" placeholder="Phone - Landline :" name="PRES_PHONE">
+								<input type="text" class="form-control" placeholder="Address" name="PRES_ADDRESS">
+								<br/>
+								<b>Vice President</b>    
+
+								<input type="text" class="form-control" placeholder="Vice President" name="VICE_PRESIDENT">
+								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="V/P_Phone">
+								<input type="text" class="form-control" placeholder="Address" name="V/P_Address">
+
+								<br/>
+								<b>SECRETARY</b>
+								<input type="text" class="form-control" placeholder="Secretary" name="SECRETARY">
+								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="Sec_Phone">
+								<input type="text" class="form-control" placeholder="Address" name="Sec_Address">          
+								
+								<br/>
+								<br/>
+								<b> TREASURER</b>
+
+								<input type="text" class="form-control" placeholder="TREASURER" name="TREASURER">
+								<input type="tel" class="form-control" placeholder="Phone - Landline : " name="Tres_Phone">
+								<input type="text" class="form-control" placeholder="Address" name="Tres_Address"> 
+								<br/>
+								<b> Trailer</b>
+								<input type="text" class="form-control" placehold <label class="check_label text-center1" for="MERV_Trailer">MERV Trailer</label>
+								<input type="checkbox" class="form-control mt-2" value="true" name="MERV_Trailer">
+								<label class="check_label text-center1 mt-2" for="other">Other Trailer 1</label><br/>
+								<input type="checkbox" class="form-control mt-2" value="true" name="Other_Trailer_1">
+								<input type="text" class="form-control" placeholder="Trailer_Rego_1" name="Trailer_Rego_1">
+								<input type="text" class="form-control" placeholder="Trailer_Description_1" name="Trailer_Description_1">
+								<label class="check_label text-center1 mt-2" for="other">Other Trailer 2</label><br/>
+								<input type="checkbox" class="form-control mt-2" value="true" name="Other_Trailer_2">
+								<input type="text" class="form-control" placeholder="Trailer_Rego_1" name="Trailer_Rego_2">
+								<input type="text" class="form-control" placeholder="Trailer_Description_1" name="Trailer_Description_2">
+								
+								<br/>
+
+								<label class="check_label text-center1" for="vehicle">Motor Vehicle</label>
+								<input type="checkbox" class="form-control mt-2" value="true" name="Motor_Vehicle_2">
+								<input type="text" class="form-control mt-2" placeholder="Rego" name="MV_Rego_2">
+								<input type="text" class="form-control" placeholder="Description" name="MV_Rego_2">
+								
+								<br/>
+								
+			
+							</div>
+						</div>
+				 </div>			
+				
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include('footer'); -%>
