@@ -4,6 +4,297 @@ $(document).ready(function () {
 		window.location.href = `${tableName}`
 	});
 
+///////////////TABLE 1
+var columns = [{
+	data: null,
+	render: function (data) {
+		return data['ID']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Form_ID']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Branch']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Surname']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['First_Names']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Address_Line_1']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Address_Line_2']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Phone_Home']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Phone_Work']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Phone_Mobile']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Email']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['DOB']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Drivers_Licence']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Class']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Expiry_Date']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Current_Position']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Organisation']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Main_Responsibilities']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Referee_1']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Ref1_Relationship']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Ref1_Phone']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Referee_2']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Ref2_Relationship']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Ref2_Phone']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Preexisting_Medical_Cond']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Preexisting_Medical_Cond']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Blue_Card']
+	}
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Issue_Date']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Issed_by_BL']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Verified']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['B_C_Expiry_Date']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Emergency_Contact_1']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC1_Relationship']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC1_Phone']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC1_Phone_Wk']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC1_Mobile']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Emergency_Contact_2']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC2_Relationship']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC2_Phone']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC2_Phone_Wk']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['EC2_Mobile']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['POI_Documents_sighted']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Latest_Award']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Year_Received']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['File_Notes']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Redundant']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['ON_BC_LIST']
+	},
+},
+{
+	data: null,
+	render: function (data) {
+		return data['Deceased']
+	},
+},
+]
+
 
 
 
@@ -22,296 +313,10 @@ columns: [
 				</div>
 			`;
 		}
-	},{
-		data: null,
-		render: function (data) {
-			return data['ID']
-		},
 	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Form_ID']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Branch']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Surname']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['First_Names']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Address_Line_1']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Address_Line_2']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Phone_Home']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Phone_Work']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Phone_Mobile']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Email']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['DOB']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Drivers_Licence']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Class']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Expiry_Date']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Current_Position']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Organisation']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Main_Responsibilities']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Referee_1']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Ref1_Relationship']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Ref1_Phone']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Referee_2']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Ref2_Relationship']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Ref2_Phone']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Pre-existing_Medical_Cond']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Medical_Cond_Details']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Blue_Card']
-		}
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Issue_Date']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Issued_by_BL']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Verified']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['BC_Expiry_Date']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Emergency_Contact_1']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC1_Relationship']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC1_Phone']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC1_Work']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC1_Mobile']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Emergency_Contact_2']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC2_Relationship']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC2_Phone']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC2_Work']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['EC2_Mobile']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['POI_Documents_Sighted']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Latest_Award']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Year_Received']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['File_Notes']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Redundant']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['Deceased']
-		},
-	},
-	{
-		data: null,
-		render: function (data) {
-			return data['ON_BC_LIST']
-		},
-	},
+	...columns,
+	
 ],
-
 });
 
 
@@ -325,18 +330,17 @@ columns: [
 	$('#table2').DataTable({
 		ajax: '/get-data-table2',
 		columns:[
-		{
-			data: null,
-			render: function (data) {
-				return `
-					<div class="d-flex align-items-center">
-						<a href="/update2/${data['ID']}" class="btn btn-dark mr-2">Update</a>
-						<button class="btn btn-danger js--btn-delete2" data-id="${data['ID']}">Delete</button>
-					</div>
-				`;
-			},
-		},
-		{
+			{
+				data: null,
+				render: function (data) {
+					return `
+						<div class="d-flex align-items-center">
+							<a href="/update2/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+							<button class="btn btn-danger js--btn-delete2" data-id="${data['ID']}">Delete</button>
+						</div>
+					`;
+				}
+			},{
 			data: null,
 			render: function(data) {
 				return data['ID']
@@ -661,19 +665,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_1_STATION/BRANCH']
+			return data['ADDRESS_LINE_1_STATION_BRANCH']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_2_PO_BOX/STREET']
+			return data['ADDRESS_LINE_2_PO_BOX_STREET']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_3_SUBURB/TOWN']
+			return data['ADDRESS_LINE_3_SUBURB_TOWN']
 		},
 	},
 	{
@@ -739,19 +743,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['VICE_PRESIDENT']
+			return data['name_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['V/P_Phone']
+			return data['phone_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['V/P_Address']
+			return data['address_vp']
 		},
 	},
 	{
@@ -793,55 +797,103 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Text72']
+			return data['Notes']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Check75']
+			return data['MERV_Trailer']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Check79']
+			return data['Other_Trailer_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text81']
+			return data['Trailer_Rego_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text83']
+			return data['Trailer_Description_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Check85']
+			return data['Motor_Vehicle_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text87']
+			return data['MV_Rego_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text89']
+			return data['MV_Description_1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Text91']
+			return data['Other_Trailer_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Trailer_Rego_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Trailer_Description_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Motor_Vehicle_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['MV_Rego_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['MV_Description_2']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['Date_of_Association']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['ar_11']
+		},
+	},
+	{
+		data: null,
+		render: function(data) {
+			return data['ar_12']
 		},
 	},
 
@@ -947,7 +999,7 @@ $('#table5').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['First_Name']
+			return data['FirstName']
 		},
 	},
 	{
@@ -965,13 +1017,13 @@ $('#table5').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Address_Line_1']
+			return data['Address1']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Address_Line_2']
+			return data['Address2']
 		},
 	},
 	{
@@ -1082,21 +1134,12 @@ $('#table5').DataTable({
 	$(document).on('change', '.js--filter', function () {
 		function condition(data) {
 			var condition = true
-			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')&& !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 ? true : false
-			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')&& !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 ? true : false
-			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 ? true : false
-			}else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 && parseFloat(data[45]) == 1 &&  parseFloat(data[46]) == 1? true : false
-			}else if (!$('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 &&  parseFloat(data[46]) == 1? true : false
-			}else if (!$('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[46]) == 1? true : false
-			}
-			else if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[44]) == 1 && parseFloat(data[46]) == 1? true : false
+			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')) {
+				condition = parseFloat(data[46]) == 1 ? true : false
+			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')) {
+				condition = parseFloat(data[48]) == 1 ? true : false
+			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked')) {
+				condition = parseFloat(data[46]) == 1 && parseFloat(data[48]) == 1 ? true : false
 			}
 			return condition
 		}
