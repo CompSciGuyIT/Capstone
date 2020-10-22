@@ -7,6 +7,7 @@ const con = mysql.createConnection({
   password: 'DucAnh',
   database: 'blbl1529_QBLAIDB_newScript',
 });
+/* blbl1529_QBLAIDB_newScript */
 setInterval(function () {
   con.query('SELECT 1');
 }, 5000);
