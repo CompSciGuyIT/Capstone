@@ -665,19 +665,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_1_STATION/BRANCH']
+			return data['ADDRESS_LINE_1_STATION_BRANCH']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_2_PO_BOX/STREET']
+			return data['ADDRESS_LINE_2_PO_BOX_STREET']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_3_SUBURB/TOWN']
+			return data['ADDRESS_LINE_3_SUBURB_TOWN']
 		},
 	},
 	{
@@ -743,19 +743,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['VICE_PRESIDENT']
+			return data['name_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['V/P_Phone']
+			return data['phone_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['V/P_Address']
+			return data['address_vp']
 		},
 	},
 	{
@@ -887,13 +887,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['2011_Audit_Received']
+			return data['ar_11']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['2012_Audit_Received']
+			return data['ar_12']
 		},
 	},
 
@@ -1134,21 +1134,12 @@ $('#table5').DataTable({
 	$(document).on('change', '.js--filter', function () {
 		function condition(data) {
 			var condition = true
-			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')&& !$('.js--filter3').is(':checked')) {
+			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')) {
 				condition = parseFloat(data[46]) == 1 ? true : false
-			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')&& !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[47]) == 1 ? true : false
-			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && !$('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 && parseFloat(data[46]) == 1 ? true : false
-			}else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 && parseFloat(data[46]) == 1 &&  parseFloat(data[46]) == 1? true : false
-			}else if (!$('.js--filter1').is(':checked') && $('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[46]) == 1 &&  parseFloat(data[47]) == 1? true : false
-			}else if (!$('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[48]) == 1? true : false
-			}
-			else if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked') && $('.js--filter3').is(':checked')) {
-				condition = parseFloat(data[45]) == 1 && parseFloat(data[47]) == 1? true : false
+			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')) {
+				condition = parseFloat(data[48]) == 1 ? true : false
+			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked')) {
+				condition = parseFloat(data[46]) == 1 && parseFloat(data[48]) == 1 ? true : false
 			}
 			return condition
 		}

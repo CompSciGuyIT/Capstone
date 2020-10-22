@@ -21,12 +21,58 @@
                 <input value="<%= data ? data.PHONE : '' %>" type="text" class="form-control" placeholder="Phone - Landline :" name="PHONE">
                 <input value="<%= data ? data.HOME : '' %>" type="text" class="form-control" placeholder="Phone - Home :" name="HOME">
                 <input value="<%= data ? data.MOBILE : '' %>" type="text" class="form-control" placeholder="Phone - Mobile :" name="MOBILE">
-
                 <input value="<%= data ? data.FAX: '' %>"" type="text" class="form-control" placeholder="Fax :" name="FAX">
                 <input value="<%= data ? data.EMAIL: '' %>"" type="text" class="form-control" placeholder="EMAIL" name="EMAIL">
     			<input value="<%= data ? data.OTHER_CONTACTS: '' %>"" type="text" class="form-control" placeholder="Other Contact" name="OTHER_CONTACTS">
 				<input value="<%= data ? data.Date_of_Association: '' %>"" type="text" class="form-control" placeholder="Date_of_Association" name="Date_of_Association">
+                <input value="<%= data ? data.ADDRESS_LINE_2_PO_BOX_STREET: '' %>"" type="text" class="form-control" placeholder="Address 2" name="ADDRESS_LINE_2_PO_BOX_STREET">
+				<input value="<%= data ? data.ADDRESS_LINE_3_SUBURB_TOWN : '' %>"" type="text" class="form-control" placeholder="Postcode" name="ADDRESS_LINE_3_SUBURB_TOWN">
+				<input value="<%= data ? data.OTHER_CONTACTS: '' %>""  type="text" class="form-control" placeholder="Other Contact" name="OTHER_CONTACTS">
+				
                 <br/>
+                <b>Audit Received</b>
+                <label class="check_label text-center1" for="ar_11">2011 Audit Recd</label><br/>
+                <input value="<%= data ? data.ar_11: '' %>"" type="checkbox" class="form-control" placeholder="2012 Audit Recd" name="ar_11">
+                <label class="check_label text-center1" for="ar_12">2012 Audit Recd</label>
+				<input value="<%= data ? data.ar_12: '' %>"" type="checkbox" class="form-control" placeholder="2012 Audit Recd" name="ar_12">
+                
+                <br/>    
+                <b>PRESIDENT</b>    
+                <input value="<%= data ? data.PRESIDENT: '' %>"" type="text" class="form-control" placeholder="President" name="PRESIDENT">
+                <input value="<%= data ? data.PRES_PHONE: '' %>"" type="tel" class="form-control" placeholder="Phone - Landline :" name="PRES_PHONE">
+                <input value="<%= data ? data.PRES_ADDRESS: '' %>"" type="text" class="form-control" placeholder="Address" name="PRES_ADDRESS">
+                <b> Vice-President</b>
+
+                <input value="<%= data ? data.name_vp: '' %>""  type="text" class="form-control" placeholder="Vice President" name="name_vp">
+                <input value="<%= data ? data.phone_vp: '' %>"" type="text" class="form-control" placeholder="Phone - Landline : " name="phone_vp">
+                <input value="<%= data ? data.address_vp: '' %>"" type="text" class="form-control" placeholder="Address" name="address_vp">
+                <br/>
+                <b>SECRETARY</b>
+                <input value="<%= data ? data.SECRETARY: '' %>"" type="text" class="form-control" placeholder="Secretary" name="SECRETARY">
+                <input value="<%= data ? data.Sec_Phone: '' %>"" type="tel" class="form-control" placeholder="Phone - Landline : " name="Sec_Phone">
+                <input value="<%= data ? data.Sec_Address: '' %>"" type="text" class="form-control" placeholder="Address" name="Sec_Address">          
+                
+                <br/>
+                <b> TREASURER</b>
+                <input value="<%= data ? data.TREASURER: '' %>"" type="text" class="form-control" placeholder="TREASURER" name="TREASURER">
+                <input value="<%= data ? data.Tres_Phone: '' %>"" type="tel" class="form-control" placeholder="Phone - Landline : " name="Tres_Phone">
+                <input value="<%= data ? data.Tres_Address: '' %>"" type="text" class="form-control" placeholder="Address" name="Tres_Address"> 
+                <br/>
+                
+                <b> Trailer</b>
+                <input type="text" class="form-control" placehold <label class="check_label text-center1" for="MERV_Trailer">MERV Trailer</label>
+                <input value="<%= data ? data.MERV_Trailer: '' %>""  type="checkbox" class="form-control mt-2"name="MERV_Trailer">
+                <label class="check_label text-center1 mt-2" for="other">Other Trailer 1</label>
+                <input value="<%= data ? data.Other_Trailer_1: '' %>"" type="checkbox" class="form-control mt-2" name="Other_Trailer_1"><br/>
+                <input value="<%= data ? data.Trailer_Rego_1: '' %>"" type="text" class="form-control" placeholder="Trailer_Rego_1" name="Trailer_Rego_1">
+                <input value="<%= data ? data.Trailer_Description_1: '' %>"" type="text" class="form-control" placeholder="Trailer_Description_1" name="Trailer_Description_1">
+                <label class="check_label text-center1 mt-2" for="other">Other Trailer 2</label><br/>
+                <input value="<%= data ? data.Other_Trailer_2: '' %>"" type="checkbox" class="form-control mt-2"  name="Other_Trailer_2"><br/>
+                <input value="<%= data ? data.Trailer_Rego_2: '' %>""  type="text" class="form-control" placeholder="Trailer_Rego_2" name="Trailer_Rego_2">
+                <input value="<%= data ? data.Trailer_Description_2: '' %>"" type="text" class="form-control" placeholder="Trailer_Description_2" name="Trailer_Description_2">
+                
+                <br/>
+
                 
                 
                 
