@@ -665,19 +665,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_1_STATION_BRANCH']
+			return data['ADDRESS_LINE_1_STATION/BRANCH']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_2_PO_BOX_STREET']
+			return data['ADDRESS_LINE_2_PO_BOX/STREET']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_3_SUBURB_TOWN']
+			return data['ADDRESS_LINE_3_SUBURB/TOWN']
 		},
 	},
 	{
@@ -743,19 +743,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['name_vp']
+			return data['VICE_PRESIDENT']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['phone_vp']
+			return data['V/P_Phone']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['address_vp']
+			return data['V/P_Address']
 		},
 	},
 	{
@@ -887,13 +887,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['ar_11']
+			return data['2011_Audit_Received']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ar_12']
+			return data['2012_Audit_Received']
 		},
 	},
 

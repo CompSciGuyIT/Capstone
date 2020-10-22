@@ -5,7 +5,7 @@ const con = mysql.createConnection({
   host: 'bluelightqld.org',
   user: 'blbl1529_DucAnh',
   password: 'DucAnh',
-  database: 'blbl1529_QBLAIDB',
+  database: 'blbl1529_QBLAIDB_newScript',
 });
 setInterval(function () {
   con.query('SELECT 1');
@@ -41,6 +41,7 @@ router.get('/get-data-table1', function (req, res) {
 router.get('/expires1', function (req, res) {
   res.render('expires1');
 });
+
 router.get('/get-data-expires1', function (req, res) {
   con.query("SELECT * FROM Volunteers", function (err, result) {
     if (err) throw err;
@@ -51,6 +52,7 @@ router.get('/get-data-expires1', function (req, res) {
     })
   });
 });
+
 router.get('/a', function (req, res) {
   con.query("SELECT * FROM Volunteers", function (err, result) {
     if (err) throw err;
