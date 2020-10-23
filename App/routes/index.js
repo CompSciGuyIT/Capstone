@@ -5,7 +5,7 @@ const con = mysql.createConnection({
   host: 'bluelightqld.org',
   user: 'blbl1529_DucAnh',
   password: 'DucAnh',
-  database: 'blbl1529_QBLAIDB_newScript',
+  database: 'blbl1529_BlueLightDB',
 });
 /* blbl1529_QBLAIDB_newScript */
 setInterval(function () {
@@ -30,7 +30,7 @@ router.get('/table1', function (req, res) {
   res.render('table1');
 });
 router.get('/get-data-table1', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
+  con.query("SELECT * FROM `Volunteers`", function (err, result) {
     if (err) throw err;
     res.send({
       data: result,
@@ -44,7 +44,7 @@ router.get('/expires1', function (req, res) {
 });
 
 router.get('/get-data-expires1', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
+  con.query("SELECT * FROM `Volunteers`", function (err, result) {
     if (err) throw err;
     //const data = result.filter(item => Math.abs(moment(item.B_C_Expiry_Date).diff(moment(), 'days')) <= 7)
     const data = result.filter(item => ((moment(item.B_C_Expiry_Date).diff(moment(), 'days') <= 30) && (moment(item.B_C_Expiry_Date).diff(moment(), 'days') > 0)))
@@ -54,26 +54,15 @@ router.get('/get-data-expires1', function (req, res) {
   });
 });
 
-router.get('/a', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
-    if (err) throw err;
-    const text = result.filter(item => ((moment(item.B_C_Expiry_Date).diff(moment(), 'days') <= 7) && (moment(item.B_C_Expiry_Date).diff(moment(), 'days') > 0)))
-    console.log(text)
-    //res.send(text);
-    //console.log(text.Blue_Light_Branch);
-    ;
-  });
-});
 
-
-router.get('/get-data-table1', function (req, res) {
-  con.query("SELECT * FROM Volunteers", function (err, result) {
-    if (err) throw err;
-    res.send({
-      data: result,
-    })
-  });
-});
+// router.get('/get-data-table1', function (req, res) {
+//   con.query("SELECT * FROM Volunteers", function (err, result) {
+//     if (err) throw err;
+//     res.send({
+//       data: result,
+//     })
+//   });
+// });
 
 
 

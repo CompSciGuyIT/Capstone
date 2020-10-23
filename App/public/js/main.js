@@ -619,9 +619,11 @@ $('#table3').DataTable({
 		{
 			data: null,
 			render: function (data) {
+				// Disabled button by changing <a> tag's href
+				// <a href="/update3/${data['ID']}" class="btn btn-dark mr-2" style=”pointer-events:none; cursor:default;”>Update</a>
 				return `
-					<div class="d-flex align-items-center">
-						<a href="/update3/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+					<div class="d-flex align-items-center">						
+						<a href="javascript:void(0)" class="btn btn-dark disabled mr-2" aria-disabled="true">Update</a>
 						<button class="btn btn-danger js--btn-delete3" data-id="${data['ID']}">Delete</button>
 					</div>
 				`;
@@ -1131,9 +1133,9 @@ $('#table5').DataTable({
 			if ($('.js--filter1').is(':checked') && !$('.js--filter2').is(':checked')) {
 				condition = parseFloat(data[46]) == 1 ? true : false
 			} else if ($('.js--filter2').is(':checked') && !$('.js--filter1').is(':checked')) {
-				condition = parseFloat(data[48]) == 1 ? true : false
+				condition = parseFloat(data[47]) == 1 ? true : false
 			} else if ($('.js--filter1').is(':checked') && $('.js--filter2').is(':checked')) {
-				condition = parseFloat(data[46]) == 1 && parseFloat(data[48]) == 1 ? true : false
+				condition = parseFloat(data[46]) == 1 && parseFloat(data[47]) == 1 ? true : false
 			}
 			return condition
 		}
@@ -1155,36 +1157,6 @@ $('#table5').DataTable({
 		],
 	
 	});
-	// $(document).on('click', '.abc', function () {
-	// 	//alert("abc");
-	// 	$.ajax({
-	// 		url:'/get-data-expires1',
-	// 		type:'GET',
-	// 		contentType: "application/json",
-	// 		dataType: 'json',
-	// 		success: function(result){
-	// 			console.log(result);
-	// 			alert("abc");
-
-	// 		}
-	// 	})
-	// })
-	$(document).on('click', '.abc', function () {
-		//alert("abc");
-		$.ajax({
-			url:'/a',
-			type:'GET',
-			contentType: "application/json",
-			dataType: 'json',
-			success: function(result){
-				alert("test");
-
-			}
-		})
-	})
-
-	
-	
 
 	
 	
