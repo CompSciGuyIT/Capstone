@@ -725,19 +725,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['PRESIDENT']
+			return data['name_pres']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['PRES_PHONE']
+			return data['phone_pres']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['PRES_ADDRESS']
+			return data['address_pres']
 		},
 	},
 	{
@@ -761,37 +761,37 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['SECRETARY']
+			return data['name_sec']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Sec_Phone']
+			return data['phone_sec']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Sec_Address']
+			return data['address_sec']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['TREASURER']
+			return data['name_tr']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Tres_Phone']
+			return data['phone_tr']
 		},
 	},
 	{
 		data: null,
 		render: function (data) {
-			return data['Tres_Address']
+			return data['address_tr']
 		}
 	},
 	{
@@ -815,13 +815,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Rego_1']
+			return data['rego_trailer']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Description_1']
+			return data['desc_trailer']
 		},
 	},
 	{
@@ -851,13 +851,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Rego_2']
+			return data['rego_trailer_2']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Description_2']
+			return data['desc_trailer_2']
 		},
 	},
 	{
@@ -881,7 +881,7 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Date_of_Association']
+			return data['Association_Since']
 		},
 	},
 	{
