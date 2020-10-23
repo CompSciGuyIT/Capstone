@@ -284,12 +284,6 @@ var columns = [{
 {
 	data: null,
 	render: function (data) {
-		return data['ON_BC_LIST']
-	},
-},
-{
-	data: null,
-	render: function (data) {
 		return data['Deceased']
 	},
 },
