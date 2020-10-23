@@ -316,10 +316,6 @@ columns: [
 
 
 
-
-
-
-
 ////////////////TABLE2
 	$('#table2').DataTable({
 		ajax: '/get-data-table2',
@@ -329,7 +325,7 @@ columns: [
 				render: function (data) {
 					return `
 						<div class="d-flex align-items-center">
-							<a href="/update2/${data['ID']}" class="btn btn-dark mr-2">Update</a>
+							<a href="javascript:void(0)" class="btn btn-dark disabled mr-2" aria-disabled="true">Update</a>
 							<button class="btn btn-danger js--btn-delete2" data-id="${data['ID']}">Delete</button>
 						</div>
 					`;
@@ -604,14 +600,6 @@ columns: [
 });
 
 
-
-
-
-
-
-
-
-
 /////////////////TABLE3
 $('#table3').DataTable({
 	ajax: '/get-data-table3',
@@ -619,13 +607,11 @@ $('#table3').DataTable({
 		{
 			data: null,
 			render: function (data) {
-				// Disabled button by changing <a> tag's href
-				// <a href="/update3/${data['ID']}" class="btn btn-dark mr-2" style=”pointer-events:none; cursor:default;”>Update</a>
 				return `
-					<div class="d-flex align-items-center">						
-						<a href="javascript:void(0)" class="btn btn-dark disabled mr-2" aria-disabled="true">Update</a>
-						<button class="btn btn-danger js--btn-delete3" data-id="${data['ID']}">Delete</button>
-					</div>
+				<div class="d-flex align-items-center">						
+					<a href="javascript:void(0)" class="btn btn-dark disabled mr-2" aria-disabled="true">Update</a>
+					<button class="btn btn-danger js--btn-delete3" data-id="${data['ID']}">Delete</button>
+				</div>
 				`;
 			}
 		},{
@@ -661,19 +647,19 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_1_STATION/BRANCH']
+			return data['ADDRESS_LINE_1_STATION_BRANCH']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_2_PO_BOX/STREET']
+			return data['ADDRESS_LINE_2_PO_BOX_STREET']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['ADDRESS_LINE_3_SUBURB/TOWN']
+			return data['ADDRESS_LINE_3_SUBURB_TOWN']
 		},
 	},
 	{
@@ -721,73 +707,73 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['PRESIDENT']
+			return data['name_pres']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['PRES_PHONE']
+			return data['phone_pres']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['PRES_ADDRESS']
+			return data['address_pres']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['VICE_PRESIDENT']
+			return data['name_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['V/P_Phone']
+			return data['phone_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['V/P_Address']
+			return data['address_vp']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['SECRETARY']
+			return data['name_sec']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Sec_Phone']
+			return data['phone_sec']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Sec_Address']
+			return data['address_sec']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['TREASURER']
+			return data['name_tr']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Tres_Phone']
+			return data['phone_tr']
 		},
 	},
 	{
 		data: null,
 		render: function (data) {
-			return data['Tres_Address']
+			return data['address_tr']
 		}
 	},
 	{
@@ -811,13 +797,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Rego_1']
+			return data['rego_trailer']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Description_1']
+			return data['desc_trailer']
 		},
 	},
 	{
@@ -847,13 +833,13 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Rego_2']
+			return data['rego_trailer_2']
 		},
 	},
 	{
 		data: null,
 		render: function(data) {
-			return data['Trailer_Description_2']
+			return data['desc_trailer_2']
 		},
 	},
 	{
@@ -877,7 +863,7 @@ $('#table3').DataTable({
 	{
 		data: null,
 		render: function(data) {
-			return data['Date_of_Association']
+			return data['Association_Since']
 		},
 	},
 	{
@@ -892,19 +878,8 @@ $('#table3').DataTable({
 			return data['ar_12']
 		},
 	},
-
-
-
-
-	
 ],
 });
-
-
-
-
-
-
 
 
 
